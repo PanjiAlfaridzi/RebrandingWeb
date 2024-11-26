@@ -18,7 +18,7 @@ class App extends BaseConfig
      */
     public string $baseURL = 'http://localhost/RebrandingWeb/public/';
 
-    /**
+    /**;lll
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.
      *
