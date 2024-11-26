@@ -275,12 +275,7 @@
                                 <ul class="nav nav-collapse">
                                     <li>
                                         <a href="components/avatars.html">
-                                            <span class="sub-item">Nelayan</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="components/buttons.html">
-                                            <span class="sub-item">Kartu Nelayan</span>
+                                            <span class="sub-item">Admin</span>
                                         </a>
                                     </li>
                                     <li>
@@ -297,18 +292,8 @@
                             <div class="collapse" id=setting>
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="components/avatars.html">
-                                            <span class="sub-item">Nelayan</span>
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a href="components/buttons.html">
                                             <span class="sub-item">visi misi</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="components/gridsystem.html">
-                                            <span class="sub-item">Berita</span>
                                         </a>
                                     </li>
                                     <li>
