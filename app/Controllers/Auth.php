@@ -31,7 +31,7 @@ class Auth extends BaseController
                 ]
             ],
             'level' => [
-                'label' => 'level',
+                'label' => 'Level',
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} Tidak Boleh Kosong !!!!'

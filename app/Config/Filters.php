@@ -88,8 +88,7 @@ class Filters extends BaseFilters
                     'Auth',
                     'Auth/*',
                     '/',
-                    'Admin',
-                    'Admin/*',
+                    
                 ],
             ]
             // 'honeypot',
