@@ -34,6 +34,7 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'FilterAdmin' => \App\Filters\FilterAdmin::class,
     ];
 
     /**
@@ -69,11 +70,28 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
+            'FilterAdmin' => [
+                'except' => [
+                    'Auth',
+                    'Auth/*',
+                    '/',
+                    
+                ],
+            ]
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
         ],
         'after' => [
+            'FilterAdmin' => [
+                'except' => [
+                    'Auth',
+                    'Auth/*',
+                    '/',
+                    'Admin',
+                    'Admin/*',
+                ],
+            ]
             // 'honeypot',
             // 'secureheaders',
         ],

@@ -30,32 +30,35 @@
                 <img src="<?= base_url('logo')?>/logo.png" width="70px" height="70px">
             </center>
             <div class="text-center">
-            <a href="<?= base_url('/')?>" style="font-size: 30px; font-weight:bold;">Dinas Perikanan</a>
+            <a href="<?= base_url('/index.php')?>" style="font-size: 30px; font-weight:bold;">Dinas Perikanan</a>
             </div>
 			<h3 class="text-center">Silahkan Login</h3>
-            <?php echo form_open() ?>
+			<?php 
+			session();
+			$validasi = \Config\Services::validation();
+			if(session()->get('pesan')){
+                echo '<div class="alert alert-danger">';
+                echo session()->get('pesan');
+                echo '</div>';
+            }
+			?>
+            <?php echo form_open('Auth/Login') ?>
 			<div class="login-form">
 				<div class="form-group">
 					<label><b>Username</b></label>
-					<input id="username" name="username" type="text" class="form-control" required>
+					<input id="username" name="username" type="text" class="form-control">
+					<p class="text-danger"><?= $validasi->getError('username') ?></p>
 				</div>
-                <div class="form-group">
-					<label><b>Level</b></label>
-					<select name="level" class="form-control">
-                        <option value="1">--Level--</option>
-                        <option value="1">Admin</option>
-                        <option value="2">User</option>
-                        <option value="3">Penduduk</option>
-                    </select>
-				</div>
+                
 				<div class="form-group">
 					<label><b>Password</b></label>
 					<a href="#" class="link float-right">Forget Password ?</a>
 					<div class="position-relative">
-						<input id="password" name="password" type="password" class="form-control" required>
+						<input id="password" name="password" type="password" class="form-control">
 						<div class="show-password">
 							<i class="flaticon-interface"></i>
 						</div>
+						<p class="text-danger"><?= $validasi->getError('password') ?></p>
 					</div>
 				</div>
 				<div class="form-group form-action-d-flex mb-3">
@@ -65,9 +68,6 @@
 					</div>
 					<button class="btn btn-primary col-md-5 float-right mt-3 mt-sm-0 fw-bold">Login</button>
 				</div>
-				<!-- 				<div class="form-action">
-					<a href="#" class="btn btn-primary btn-rounded btn-login">Sign In</a>
-				</div> -->
 				
 			</div>
             <?php echo form_close() ?>
