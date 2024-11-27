@@ -11,6 +11,7 @@ class ModelAuth extends Model
             ->where([
                 'username' => $username,
                 'password' => $password,
+                // 'level' => $level,
             ])->get()->getRowArray();
     }
 }
