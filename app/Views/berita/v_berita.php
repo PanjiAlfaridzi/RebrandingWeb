@@ -1,7 +1,7 @@
 <div class="col-sm-12">
     <div class="card">
         <div class="card-header">
-            <div class="card-title"><i class="fa fa-table"></i>Data <?= $judul ?></div>
+            <div class="card-title"><i class="fa fa-table"></i> Data <?= $judul ?></div>
         </div>
         <div class="card-body">
             <?php
@@ -26,7 +26,7 @@
             <a href="<?= base_url('index.php/Berita/Input') ?>" type="button" class="btn btn-primary btn-sm">
                 <i class="fas fa-plus mr-2"></i>Tambah Data
             </a>
-            <table id="basic-datatables" class="table table-striped table-hover table-bordered-bd-primary table-head-bg-primary mt-3" </table>
+            <table id="basic-datatables" class="table table-striped table-hover table-bordered-bd-primary table-head-bg-primary mt-3">
                 <thead>
                     <tr class="text-center">
                         <th width="50px">#</th>
@@ -43,7 +43,7 @@
                             <td><?= $no++ ?></td>
                             <td class="text-center"><?= $p['judul_berita'] ?></td>
                             <td class="text-center"><img src="<?= base_url('foto/' . $p['gambar_berita']) ?>" width="250px" alt=""></td>
-                            <td><?= $p['tgl_berita'] ?><?= $p['jam_berita'] ?></td>
+                            <td><?= $p['tgl_berita'] ?> <?= $p['jam_berita'] ?></td>
                             <td>
                                 <button class="btn btn-warning btn-xs" data-bs-toggle="modal" data-bs-target="#edit<?= $p['id_berita'] ?>"><i class="fa fa-pencil-alt"></i></button>
                                 <button class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#delete<?= $p['id_berita'] ?>"><i class="fa fa-trash-alt"></i></button>
@@ -52,12 +52,11 @@
                     <?php } ?>
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>
-<?php
-foreach ($berita as $key => $p) { ?>
+
+<?php foreach ($berita as $key => $p) { ?>
     <div class="modal fade" id="edit<?= $p['id_berita'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -65,28 +64,24 @@ foreach ($berita as $key => $p) { ?>
                     <h5 class="modal-title" id="exampleModalLabel">Edit Data Berita</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <?php
-                echo form_open('Berita/UpdateData/' . $p['id_berita'])
-                ?>
+                <?php echo form_open_multipart('Berita/UpdateData/' . $p['id_berita'], ['enctype' => 'multipart/form-data']); ?>
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Judul Berita</label>
-                        <br>
-                        <input name="judul_berita" value="<?= $p['judul_berita'] ?>" class="form-control" placeholder="Nama" required>
-                        <label>Gambar Berita</label>
-                        <br>
-                        <input name="gambar_berita" value="<?= $p['gambar_berita'] ?>" class="form-control" placeholder="Alamat" required>
+                        <input name="judul_berita" value="<?= $p['judul_berita'] ?>" class="form-control" placeholder="Judul Berita" required>
 
+                        <label>Gambar Berita</label>
+                        <input type="file" name="gambar_berita" class="form-control">
+                        <small class="form-text text-muted">Biarkan kosong jika tidak ingin mengubah gambar.</small>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
-                <?php
-                echo form_close()
-                ?>
+                <?php echo form_close(); ?>
             </div>
+            </ div>
         </div>
     </div>
 
@@ -97,9 +92,7 @@ foreach ($berita as $key => $p) { ?>
                     <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <?php
-                echo form_open('Berita/DeleteData/' . $p['id_berita'])
-                ?>
+                <?php echo form_open('Berita/DeleteData/' . $p['id_berita']); ?>
                 <div class="modal-body">
                     Apakah Ingin Hapus Data <b><?= $p['judul_berita'] ?></b> ..?
                 </div>
@@ -107,9 +100,7 @@ foreach ($berita as $key => $p) { ?>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </div>
-                <?php
-                echo form_close()
-                ?>
+                <?php echo form_close(); ?>
             </div>
         </div>
     </div>
@@ -118,29 +109,5 @@ foreach ($berita as $key => $p) { ?>
 <script>
     $(document).ready(function() {
         $('#basic-datatables').DataTable({});
-
-        $('#multi-filter-select').DataTable({
-            "pageLength": 5,
-            initComplete: function() {
-                this.api().columns().every(function() {
-                    var column = this;
-                    var select = $('<select class="form-control"><option value=""></option></select>')
-                        .appendTo($(column.footer()).empty())
-                        .on('change', function() {
-                            var val = $.fn.dataTable.util.escapeRegex(
-                                $(this).val()
-                            );
-
-                            column
-                                .search(val ? '^' + val + '$' : '', true, false)
-                                .draw();
-                        });
-
-                    column.data().unique().sort().each(function(d, j) {
-                        select.append('<option value="' + d + '">' + d + '</option>')
-                    });
-                });
-            }
-        });
     });
 </script>

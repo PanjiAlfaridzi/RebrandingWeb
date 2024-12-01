@@ -63,16 +63,46 @@ class Berita extends BaseController
 
     public function UpdateData($id_berita)
     {
+        // Ambil file gambar dari form
+        $fileGambar = $this->request->getFile('gambar_berita');
+
+        // Siapkan array data untuk update
         $data = [
             'id_berita' => $id_berita,
             'judul_berita' => $this->request->getPost('judul_berita'),
             'isi_berita' => $this->request->getPost('isi_berita'),
-            'gambar_berita' => $this->request->getPost('gambar_berita')
         ];
-        session()->setFlashdata('update', 'Data Berhasil Diupdate');
+
+        // Jika ada file gambar yang diupload
+        if ($fileGambar && $fileGambar->isValid() && !$fileGambar->hasMoved()) {
+            // Tentukan folder tujuan dan nama file
+            $folderTujuan = 'C:/xampp/htdocs/rebrandingweb/public/foto'; // Ganti dengan path folder yang sesuai
+            $fileName = $fileGambar->getRandomName(); // Mendapatkan nama file acak
+
+            // Pindahkan file ke folder tujuan
+            $fileGambar->move($folderTujuan, $fileName);
+
+            // Tambahkan nama file ke data yang akan diupdate
+            $data['gambar_berita'] = $fileName;
+
+            // Opsional: Hapus file lama jika ada (ambil nama file lama dari database)
+            $beritaLama = $this->ModelBerita->find($id_berita); // Pastikan fungsi `find` ada di model Anda
+            if ($beritaLama && $beritaLama['gambar_berita']) {
+                $fileLama = $folderTujuan . '/' . $beritaLama['gambar_berita'];
+                if (is_file($fileLama)) {
+                    unlink($fileLama); // Hapus file lama
+                }
+            }
+        }
+
+        // Update data di database
         $this->ModelBerita->UpdateData($data);
+
+        // Berikan notifikasi ke pengguna
+        session()->setFlashdata('update', 'Data Berhasil Diupdate');
         return redirect()->to('Berita');
     }
+
 
     public function DeleteData($id_berita)
     {

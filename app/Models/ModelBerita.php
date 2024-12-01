@@ -6,6 +6,9 @@ use CodeIgniter\Model;
 
 class ModelBerita extends Model
 {
+    protected $table = 'tbl_berita'; // Nama tabel
+    protected $primaryKey = 'id_berita'; // Primary key tabel
+    protected $allowedFields = ['judul_berita', 'isi_berita', 'gambar_berita'];
     public function AllData()
     {
         return $this->db->table('tbl_berita')
