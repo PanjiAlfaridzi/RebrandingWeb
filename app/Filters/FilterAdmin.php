@@ -25,9 +25,9 @@ class FilterAdmin implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        // if(session()->get('level') == ''){
+        // if(session()->get('password') == ''){
         //     session()->setFlashdata('pesan', 'Silahkan Login 1!!');
-        //     return redirect()->to('Auth');
+        //     return redirect()->to('Admin/index');
         // }
     }
 
@@ -45,7 +45,7 @@ class FilterAdmin implements FilterInterface
      */
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
-        // if(session()->get('level') == '1'){
+        // if(session()->get('password') == '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'){
         //     session()->setFlashdata('pesan', 'Silahkan Login dulu!!');
         //     return redirect()->to('Admin');
         // }

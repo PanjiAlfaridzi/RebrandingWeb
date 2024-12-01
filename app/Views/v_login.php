@@ -49,7 +49,7 @@
 					<input id="username" name="username" type="text" class="form-control">
 					<p class="text-danger"><?= $validasi->getError('username') ?></p>
 				</div>
-                <div class="form-group">
+                <!-- <div class="form-group">
 					<label><b>Level</b></label>
 					<select name="level" class="form-control">
                         <option value="1">--Level--</option>
@@ -58,7 +58,7 @@
                         <option value="3">Penduduk</option>
                     </select>
                     <p class="text-danger"><?= $validasi->getError('level') ?></p>
-				</div>
+				</div> -->
 				<div class="form-group">
 					<label><b>Password</b></label>
 					<a href="#" class="link float-right">Forget Password ?</a>

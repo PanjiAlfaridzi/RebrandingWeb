@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Nov 2024 pada 08.51
+-- Waktu pembuatan: 01 Des 2024 pada 04.43
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -41,7 +41,8 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id_user`, `nama_user`, `username`, `password`, `level`, `foto`) VALUES
-(1, 'Despia', 'admin', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 1, 'admin.png');
+(1, 'Despia', 'admin', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 1, 'admin.png'),
+(2, 'Branded', 'branded', '618dcdfb0cd9ae4481164961c4796dd8e3930c8d', 1, 'admin.png');
 
 -- --------------------------------------------------------
 
@@ -68,6 +69,30 @@ CREATE TABLE `tbl_desa` (
   `nama_desa` varchar(100) DEFAULT NULL,
   `logo_desa` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_nelayan`
+--
+
+CREATE TABLE `tbl_nelayan` (
+  `id_nelayan` int(10) NOT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `alamat` varchar(500) DEFAULT NULL,
+  `kota` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_nelayan`
+--
+
+INSERT INTO `tbl_nelayan` (`id_nelayan`, `nama`, `alamat`, `kota`) VALUES
+(1, 'Joko Susilooo', 'Jln.Ambaraw', 'Semaran'),
+(2, 'branded', 'ungaran', 'kab.semarang'),
+(3, 'despia', 'demak', 'demak'),
+(4, 'nana', 'semarang', 'semarang'),
+(5, 'saa', 'aa', 'aaa');
 
 -- --------------------------------------------------------
 
@@ -133,6 +158,12 @@ ALTER TABLE `tbl_desa`
   ADD PRIMARY KEY (`id_desa`);
 
 --
+-- Indeks untuk tabel `tbl_nelayan`
+--
+ALTER TABLE `tbl_nelayan`
+  ADD PRIMARY KEY (`id_nelayan`);
+
+--
 -- Indeks untuk tabel `tbl_pendidikan`
 --
 ALTER TABLE `tbl_pendidikan`
@@ -158,7 +189,7 @@ ALTER TABLE `tbl_penghasilan`
 -- AUTO_INCREMENT untuk tabel `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_berita`
@@ -171,6 +202,12 @@ ALTER TABLE `tbl_berita`
 --
 ALTER TABLE `tbl_desa`
   MODIFY `id_desa` int(1) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_nelayan`
+--
+ALTER TABLE `tbl_nelayan`
+  MODIFY `id_nelayan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pendidikan`

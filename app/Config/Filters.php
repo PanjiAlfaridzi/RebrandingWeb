@@ -35,6 +35,7 @@ class Filters extends BaseFilters
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
         'FilterAdmin' => \App\Filters\FilterAdmin::class,
+        ''
     ];
 
     /**
@@ -75,7 +76,8 @@ class Filters extends BaseFilters
                     'Auth',
                     'Auth/*',
                     '/',
-                    
+                    'Home',
+                    'Home/*',
                 ],
             ]
             // 'honeypot',
@@ -83,12 +85,18 @@ class Filters extends BaseFilters
             // 'invalidchars',
         ],
         'after' => [
+            'toolbar',
             'FilterAdmin' => [
                 'except' => [
                     'Auth',
                     'Auth/*',
                     '/',
-                    
+                    'Admin',
+                    'Admin/*',
+                    'Home',
+                    'Home/*',
+                    'Nelayan', 'Nelayan/*',
+                    'Berita', 'Berita/*',
                 ],
             ]
             // 'honeypot',

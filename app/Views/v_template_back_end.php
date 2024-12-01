@@ -26,9 +26,38 @@
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="<?= base_url('back-end') ?>/assets/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('back-end') ?>/assets/css/azzara.min.css">
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="<?= base_url('back-end') ?>/assets/css/demo.css">
+
+    <!--   Core JS Files   -->
+    <script src="<?= base_url('back-end') ?>/assets/js/core/jquery.3.2.1.min.js"></script>
+    <script src="<?= base_url('back-end') ?>/assets/js/core/popper.min.js"></script>
+    <script src="<?= base_url('back-end') ?>/assets/js/core/bootstrap.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="<?= base_url('back-end') ?>/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="<?= base_url('back-end') ?>/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <!-- Moment JS -->
+    <script src="<?= base_url('back-end') ?>/assets/js/plugin/moment/moment.min.js"></script><!-- DateTimePicker -->
+    <script src="<?= base_url('back-end') ?>/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
+    <!-- Bootstrap Toggle -->
+    <script src="<?= base_url('back-end') ?>/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+    <!-- jQuery Scrollbar -->
+    <script src="<?= base_url('back-end') ?>/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <!-- Datatables -->
+    <script src="<?= base_url('back-end') ?>/assets/js/plugin/datatables/datatables.min.js"></script>
+    <!-- Azzara JS -->
+    <script src="<?= base_url('back-end') ?>/assets/js/ready.min.js"></script>
+    <!-- Azzara DEMO methods, don't include it in your project! -->
+    <script src="<?= base_url('back-end') ?>/assets/js/setting-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="<?= base_url('summernote')?>/summernote-bs4.min.css" rel="stylesheet">
+    <script src="<?= base_url('summernote')?>/summernote-bs4.min.js"></script>
+
 </head>
 
 <body>
@@ -41,7 +70,7 @@
             <div class="logo-header">
 
                 <a href="index.html" class="logo">
-                <img src="<?= base_url('logo')?>/logo.png" width="40px" height="40px">
+                    <img src="<?= base_url('logo') ?>/logo.png" width="40px" height="40px">
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
@@ -204,15 +233,15 @@
                         <li class="nav-item dropdown hidden-caret">
                             <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                                 <div class="avatar-sm">
-                                    <img src="<?= base_url('foto') ?>/<?= session()->get('foto')?>" alt="..." class="avatar-img rounded-circle">
+                                    <img src="<?= base_url('foto') ?>/<?= session()->get('foto') ?>" alt="..." class="avatar-img rounded-circle">
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-user animated fadeIn">
                                 <li>
                                     <div class="user-box">
-                                        <div class="avatar-lg"><img src="<?= base_url('foto') ?>/<?= session()->get('foto')?>" alt="image profile" class="avatar-img rounded"></div>
+                                        <div class="avatar-lg"><img src="<?= base_url('foto') ?>/<?= session()->get('foto') ?>" alt="image profile" class="avatar-img rounded"></div>
                                         <div class="u-text">
-                                            <h4><?= session()->get('nama_user')?></h4>
+                                            <h4><?= session()->get('nama_user') ?></h4>
                                             <p class="text-muted">Admin</p>
                                         </div>
                                     </div>
@@ -244,12 +273,12 @@
                 <div class="sidebar-content">
                     <div class="user">
                         <div class="avatar-sm float-left mr-2">
-                            <img src="<?= base_url('foto') ?>/<?= session()->get('foto')?>" alt="..." class="avatar-img rounded-circle">
+                            <img src="<?= base_url('foto') ?>/<?= session()->get('foto') ?>" alt="..." class="avatar-img rounded-circle">
                         </div>
                         <div class="info">
                             <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
                                 <span>
-                                    <?= session()->get('nama_user')?>
+                                    <?= session()->get('nama_user') ?>
                                     <span class="user-level">Admin</span>
                                     <span class="caret"></span>
                                 </span>
@@ -259,7 +288,7 @@
                     </div>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a href="<?= base_url('Admin') ?>">
+                            <a href="<?= base_url('/index.php/Admin') ?>">
                                 <i class="fas fa-home"></i>
                                 <p>Dashboard</p>
                                 <span class="badge badge-count">5</span>
@@ -274,8 +303,8 @@
                             <div class="collapse" id="base">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="components/avatars.html">
-                                            <span class="sub-item">Admin</span>
+                                        <a href="<?= base_url('/index.php/Nelayan') ?>">
+                                            <span class="sub-item">Nelayan</span>
                                         </a>
                                     </li>
                                     <li>
@@ -301,14 +330,14 @@
                             </div>
 
                         <li class="nav-item">
-                            <a href="<?= base_url('Admin') ?>">
+                            <a href="<?= base_url('/index.php/Nelayan') ?>">
                                 <i class="fas fa-users"></i>
                                 <p>Nelayan</p>
                                 <span class="badge badge-count">5</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Admin') ?>">
+                            <a href="<?= base_url('/index.php/Berita') ?>">
                                 <i class="fas fa-newspaper"></i>
                                 <p>Berita</p>
                                 <span class="badge badge-count">5</span>
@@ -327,7 +356,9 @@
             <div class="content">
                 <div class="page-inner">
                     <h4 class="page-title"><?= $judul ?></h4>
-
+                    <?php if ($page) {
+                        echo view($page);
+                    } ?>
                 </div>
             </div>
         </div>
@@ -336,29 +367,7 @@
 
     <!-- End Custom template -->
     </div>
-    <!--   Core JS Files   -->
-    <script src="<?= base_url('back-end') ?>/assets/js/core/jquery.3.2.1.min.js"></script>
-    <script src="<?= base_url('back-end') ?>/assets/js/core/popper.min.js"></script>
-    <script src="<?= base_url('back-end') ?>/assets/js/core/bootstrap.min.js"></script>
-    <!-- jQuery UI -->
-    <script src="<?= base_url('back-end') ?>/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-    <script src="<?= base_url('back-end') ?>/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-    <!-- Moment JS -->
-    <script src="<?= base_url('back-end') ?>/assets/js/plugin/moment/moment.min.js"></script><!-- DateTimePicker -->
-    <script src="<?= base_url('back-end') ?>/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
-    <!-- Bootstrap Toggle -->
-    <script src="<?= base_url('back-end') ?>/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-    <!-- jQuery Scrollbar -->
-    <script src="<?= base_url('back-end') ?>/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-    <!-- Azzara JS -->
-    <script src="<?= base_url('back-end') ?>/assets/js/ready.min.js"></script>
-    <!-- Azzara DEMO methods, don't include it in your project! -->
-    <script src="<?= base_url('back-end') ?>/assets/js/setting-demo.js"></script>
-    <script>
-        $('#datepicker').datetimepicker({
-            format: 'MM/DD/YYYY',
-        });
-    </script>
+
 </body>
 
 </html>
