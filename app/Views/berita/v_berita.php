@@ -58,61 +58,61 @@
 </div>
 <?php
 foreach ($berita as $key => $p) { ?>
-<div class="modal fade" id="edit<?= $p['id_berita']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Data Berita</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <?php
-            echo form_open('Berita/UpdateData/' . $p['id_berita'])
-            ?>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Judul Berita</label>
-                    <br>
-                    <input name="judul_berita" value="<?= $p['judul_berita']?>" class="form-control" placeholder="Nama" required>
-                    <label>Gambar Berita</label>
-                    <br>
-                    <input name="gambar_berita" value="<?= $p['gambar_berita']?>" class="form-control" placeholder="Alamat" required>
-
+    <div class="modal fade" id="edit<?= $p['id_berita'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Data Berita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Update</button>
-            </div>
-            <?php
-            echo form_close()
-            ?>
-        </div>
-    </div>
-</div>
+                <?php
+                echo form_open('Berita/UpdateData/' . $p['id_berita'])
+                ?>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Judul Berita</label>
+                        <br>
+                        <input name="judul_berita" value="<?= $p['judul_berita'] ?>" class="form-control" placeholder="Nama" required>
+                        <label>Gambar Berita</label>
+                        <br>
+                        <input name="gambar_berita" value="<?= $p['gambar_berita'] ?>" class="form-control" placeholder="Alamat" required>
 
-<div class="modal fade" id="delete<?= $p['id_berita']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+                <?php
+                echo form_close()
+                ?>
             </div>
-            <?php
-            echo form_open('Berita/DeleteData/' . $p['id_berita'])
-            ?>
-            <div class="modal-body">
-                Apakah Ingin Hapus Data <b><?= $p['judul_berita'] ?></b> ..?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-danger">Delete</button>
-            </div>
-            <?php
-            echo form_close()
-            ?>
         </div>
     </div>
-</div>
+
+    <div class="modal fade" id="delete<?= $p['id_berita'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <?php
+                echo form_open('Berita/DeleteData/' . $p['id_berita'])
+                ?>
+                <div class="modal-body">
+                    Apakah Ingin Hapus Data <b><?= $p['judul_berita'] ?></b> ..?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+                <?php
+                echo form_close()
+                ?>
+            </div>
+        </div>
+    </div>
 <?php } ?>
 
 <script>

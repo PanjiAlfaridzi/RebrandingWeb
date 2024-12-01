@@ -4,7 +4,7 @@
             <div class="card-title"><i class="fa fa-table"></i>Data <?= $judul ?></div>
         </div>
         <?php
-        echo form_open('Berita/InsertData')
+        echo form_open('Berita/InsertData', ['enctype' => 'multipart/form-data']);
         ?>
         <div class="card-body">
             <div class="form-group">
@@ -13,7 +13,7 @@
             </div>
             <div class="form-group">
                 <label>Isii Berita</label>
-                <textarea  id="summernote" name="isi_berita"></textarea>
+                <textarea id="summernote" name="isi_berita"></textarea>
             </div>
             <div class="form-group">
                 <label>Gambar Berita</label>
