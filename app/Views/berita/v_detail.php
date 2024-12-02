@@ -27,6 +27,221 @@
 
     <!-- Template Main CSS File -->
     <link href="<?= base_url('front-end') ?>/assets/css/style.css" rel="stylesheet">
+    <style>
+        /* Berita Styles */
+        .berita-detail {
+            padding: 40px 0;
+            background: #f8f9fa;
+        }
+
+        .entry {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .entry-img-container {
+            width: 100%;
+            height: 450px;
+            /* Fixed height */
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .entry-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .entry-img:hover {
+            transform: scale(1.02);
+        }
+
+        .entry-title {
+            color: #2c4964;
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .entry-meta {
+            margin: 15px 0;
+            color: #777;
+        }
+
+        .entry-meta span {
+            margin-right: 20px;
+            font-size: 14px;
+        }
+
+        .entry-meta i {
+            color: #5fcf80;
+            margin-right: 5px;
+        }
+
+        .entry-content {
+            color: #444;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .entry-footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-tags a {
+            background: #f8f9fa;
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: #5fcf80;
+            margin-right: 8px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .article-tags a:hover {
+            background: #5fcf80;
+            color: #fff;
+        }
+
+        .article-share {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .share-icon {
+            width: 35px;
+            height: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .share-icon:hover {
+            transform: translateY(-3px);
+        }
+
+        .share-icon.facebook {
+            background: #3b5998;
+        }
+
+        .share-icon.twitter {
+            background: #1da1f2;
+        }
+
+        .share-icon.whatsapp {
+            background: #25d366;
+        }
+
+        .berita-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 20px 0;
+        }
+
+        .btn-nav {
+            padding: 10px 20px;
+            background: #5fcf80;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-nav:hover {
+            background: #3ac162;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .berita-not-found {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .berita-not-found i {
+            font-size: 60px;
+            color: #5fcf80;
+            margin-bottom: 20px;
+        }
+
+        .berita-not-found h3 {
+            color: #2c4964;
+            margin-bottom: 10px;
+        }
+
+        .btn-back-home {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #5fcf80;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .btn-back-home:hover {
+            background: #3ac162;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Breadcrumbs styling */
+        .breadcrumbs {
+            margin-top: 80px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #5fcf80 0%, #3ac162 100%);
+            color: #fff;
+        }
+
+        .breadcrumbs h2 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .breadcrumbs p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .entry-img-container {
+                height: 300px;
+            }
+
+            .entry {
+                padding: 20px;
+            }
+
+            .entry-title {
+                font-size: 24px;
+            }
+
+            .entry-footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
 
     <!-- =======================================================
   * Template Name: Mentor - v4.9.1
@@ -105,17 +320,84 @@
     </header>
 
 
-    <h1><?= $judul ?></h1>
+    <!-- Main Content -->
+    <main id="main" data-aos="fade-up">
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <h2><?= $judul ?></h2>
+                <p>Detail berita terkini dari Dinas Perikanan Kota Semarang </p>
+            </div>
+        </div>
 
-    <div>
-        <?php if (isset($berita) && !empty($berita)): ?>
-            <h2><?= $berita['judul_berita'] ?></h2>
-            <img src="<?= base_url('foto/' . $berita['gambar_berita']) ?>" alt="Gambar Berita">
-            <p><?= $berita['isi_berita'] ?></p>
-        <?php else: ?>
-            <p>Berita tidak ditemukan</p>
-        <?php endif; ?>
-    </div>
+        <!-- ======= Detail Berita Section ======= -->
+        <section class="berita-detail pt-4">
+            <div class="container">
+                <?php if (isset($berita) && !empty($berita)): ?>
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <!-- Berita Card -->
+                            <article class="entry">
+                                <!-- Berita Image Container -->
+                                <div class="entry-img-container mb-4">
+                                    <img src="<?= base_url('foto/' . $berita['gambar_berita']) ?>"
+                                        alt="<?= $berita['judul_berita'] ?>"
+                                        class="entry-img">
+                                </div>
+
+                                <h2 class="entry-title mb-3">
+                                    <?= $berita['judul_berita'] ?>
+                                </h2>
+
+                                <div class="entry-meta mb-4">
+                                    <span><i class="bi bi-calendar-event"></i> <?= date('d F Y') ?></span>
+                                    <span><i class="bi bi-eye"></i> 123 Views</span>
+                                    <span><i class="bi bi-person"></i> Admin</span>
+                                </div>
+
+                                <div class="entry-content">
+                                    <?= $berita['isi_berita'] ?>
+                                </div>
+
+                                <!-- Tags & Share -->
+                                <div class="entry-footer mt-4">
+                                    <div class="article-tags">
+                                        <i class="bi bi-tags"></i>
+                                        <a href="#">Perikanan</a>
+                                        <a href="#">Berita</a>
+                                    </div>
+
+                                    <div class="article-share">
+                                        <span>Bagikan:</span>
+                                        <a href="#" class="share-icon facebook"><i class="bi bi-facebook"></i></a>
+                                        <a href="#" class="share-icon twitter"><i class="bi bi-twitter"></i></a>
+                                        <a href="#" class="share-icon whatsapp"><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Navigation -->
+                            <div class="berita-nav">
+                                <a href="<?= base_url('home') ?>" class="btn-nav back">
+                                    <i class="bi bi-arrow-left"></i> Kembali
+                                </a>
+                                <a href="#" class="btn-nav next">
+                                    Berita Selanjutnya <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="berita-not-found">
+                        <i class="bi bi-journal-x"></i>
+                        <h3>Berita Tidak Ditemukan</h3>
+                        <p>Maaf, berita yang Anda cari tidak tersedia</p>
+                        <a href="<?= base_url('home') ?>" class="btn-back-home">Kembali ke Beranda</a>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </section>
+    </main>
 
 
 
