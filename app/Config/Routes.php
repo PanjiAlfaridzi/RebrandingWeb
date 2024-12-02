@@ -17,7 +17,7 @@ $routes->set404Override();
 $routes->setAutoRoute(true);
 
 $routes->get('/', 'Home::index');
-$routes->get('berita', 'Berita::index'); // Menampilkan daftar berita
+$routes->get('berita', 'DetailBerita::index'); // Menampilkan daftar berita
 $routes->get('berita/detail/(:num)', 'DetailBerita::index/$1'); // Menampilkan detail berita berdasarkan ID
 
 

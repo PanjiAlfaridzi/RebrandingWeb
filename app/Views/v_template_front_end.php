@@ -132,7 +132,7 @@
                                 </p>
                                 <div class="trainer d-flex justify-content-end">
                                     <div class="trainer-profile">
-                                        <a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                                        <a href="<?= base_url('berita/detail/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
