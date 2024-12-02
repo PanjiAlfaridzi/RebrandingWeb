@@ -32,6 +32,7 @@
                         <th width="50px">#</th>
                         <th scope="col">Judul Berita</th>
                         <th scope="col">Gambar</th>
+                        <th scope="col">Isi Berita</th>
                         <th scope="col">Tanggal</th>
                         <th width="100px">Aksi</th>
                     </tr>
@@ -43,6 +44,7 @@
                             <td><?= $no++ ?></td>
                             <td class="text-center"><?= $p['judul_berita'] ?></td>
                             <td class="text-center"><img src="<?= base_url('foto/' . $p['gambar_berita']) ?>" width="250px" alt=""></td>
+                            <td class="text-center"><?= $p['isi_berita'] ?></td>
                             <td><?= $p['tgl_berita'] ?> <?= $p['jam_berita'] ?></td>
                             <td>
                                 <button class="btn btn-warning btn-xs" data-bs-toggle="modal" data-bs-target="#edit<?= $p['id_berita'] ?>"><i class="fa fa-pencil-alt"></i></button>
@@ -70,18 +72,21 @@
                         <label>Judul Berita</label>
                         <input name="judul_berita" value="<?= $p['judul_berita'] ?>" class="form-control" placeholder="Judul Berita" required>
 
+                        <label>Isi Berita</label>
+                        <input name="isi_berita" value="<?= $p['isi_berita'] ?>" class="form-control" placeholder="Isi Berita" required>
+
                         <label>Gambar Berita</label>
                         <input type="file" name="gambar_berita" class="form-control">
                         <small class="form-text text-muted">Biarkan kosong jika tidak ingin mengubah gambar.</small>
                     </div>
                 </div>
+
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Update</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
                 <?php echo form_close(); ?>
             </div>
-            </ div>
         </div>
     </div>
 
