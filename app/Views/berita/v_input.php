@@ -12,7 +12,7 @@
                 <input name="judul_berita" class="form-control" placeholder="Judul Berita">
             </div>
             <div class="form-group">
-                <label>Isii Berita</label>
+                <label>Isi Berita</label>
                 <textarea id="summernote" name="isi_berita"></textarea>
             </div>
             <div class="form-group">

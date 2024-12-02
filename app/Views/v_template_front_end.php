@@ -123,30 +123,36 @@
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
                 <?php foreach ($berita as $item) : ?>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                        <div class="course-item">
-                            <img src="<?= base_url('foto/' . esc($item['gambar_berita'])) ?>" class="img-fluid" alt="...">
-                            <div class="course-content">
+                        <div class="card-berita shadow-sm h-100">
+                            <img src="<?= base_url('foto/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column">
                                 <h3><a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a></h3>
                                 <p>
                                     <?= esc(substr(strip_tags($item['isi_berita']), 0, 150)) . '...' ?>
                                 </p>
-                                <div class="trainer d-flex justify-content-end">
+                                <div class="mt-auto text-center mb-3">
                                     <div class="trainer-profile">
                                         <a href="<?= base_url('berita/detail/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
+
             <!-- Pagination -->
             <div class="pagination d-flex justify-content-center">
                 <?= $pagination_links ?>
             </div>
         </div>
-        </div>
     </section><!-- End News Section -->
+
+
+
+
+
 
     <!-- Profile-->
     <main id="main">

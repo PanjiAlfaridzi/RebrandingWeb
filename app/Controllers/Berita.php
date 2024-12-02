@@ -10,6 +10,7 @@ class Berita extends BaseController
     public function __construct()
     {
         $this->ModelBerita = new ModelBerita();
+        date_default_timezone_set('Asia/Jakarta');
     }
     public function index(): string
     {
@@ -21,8 +22,6 @@ class Berita extends BaseController
         return view('v_template_back_end', $data);
     }
 
-
-
     public function Input()
     {
         $data = [
@@ -32,6 +31,7 @@ class Berita extends BaseController
         ];
         return view('v_template_back_end', $data);
     }
+
     public function InsertData()
     {
         // Ambil file yang diupload
@@ -46,11 +46,13 @@ class Berita extends BaseController
             // Pindahkan file ke folder tujuan
             $fileGambar->move($folderTujuan, $fileName);
 
-            // Siapkan data untuk disimpan
+            // Siapkan data untuk disimpan dengan pembersihan tag HTML
             $data = [
-                'judul_berita' => $this->request->getPost('judul_berita'),
-                'isi_berita' => $this->request->getPost('isi_berita'),
-                'gambar_berita' => $fileName // Simpan nama file ke database
+                'judul_berita' => strip_tags($this->request->getPost('judul_berita')),
+                'isi_berita' => strip_tags($this->request->getPost('isi_berita')),
+                'gambar_berita' => $fileName, // Simpan nama file ke database
+                'tgl_berita' => date('Y-m-d'), // Tanggal sekarang
+                'jam_berita' => date('H:i:s'), // Jam sekarang
             ];
 
             // Simpan data ke database
@@ -63,16 +65,19 @@ class Berita extends BaseController
         return redirect()->to('Berita');
     }
 
+
     public function UpdateData($id_berita)
     {
         // Ambil file gambar dari form
         $fileGambar = $this->request->getFile('gambar_berita');
 
-        // Siapkan array data untuk update
+        // Siapkan array data untuk update dengan pembersihan tag HTML
         $data = [
             'id_berita' => $id_berita,
-            'judul_berita' => $this->request->getPost('judul_berita'),
-            'isi_berita' => $this->request->getPost('isi_berita'),
+            'judul_berita' => strip_tags($this->request->getPost('judul_berita')),
+            'isi_berita' => strip_tags($this->request->getPost('isi_berita')),
+            'tgl_berita' => date('Y-m-d'), // Tanggal sekarang
+            'jam_berita' => date('H:i:s'), // Jam sekarang
         ];
 
         // Jika ada file gambar yang diupload
@@ -104,7 +109,6 @@ class Berita extends BaseController
         session()->setFlashdata('update', 'Data Berhasil Diupdate');
         return redirect()->to('Berita');
     }
-
 
     public function DeleteData($id_berita)
     {

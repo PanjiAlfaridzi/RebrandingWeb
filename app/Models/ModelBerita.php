@@ -37,10 +37,10 @@ class ModelBerita extends Model
 
     public function DetailBerita($id_berita)
     {
-        return $this->where(['id_berita' => $id_berita])->first();
+        return $this->db->table('tbl_berita')
+            ->where('id_berita', $id_berita)
+            ->get()->getRowArray();
     }
-
-
 
     // Method baru untuk mengambil berita terbaru
 }

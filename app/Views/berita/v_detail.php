@@ -350,8 +350,8 @@
                                 </h2>
 
                                 <div class="entry-meta mb-4">
-                                    <span><i class="bi bi-calendar-event"></i> <?= date('d F Y') ?></span>
-                                    <span><i class="bi bi-eye"></i> 123 Views</span>
+                                    <span><i class="bi bi-calendar-event"></i> <?= date('d F Y', strtotime($berita['tgl_berita'])) ?></span>
+                                    <span><i class="bi bi-clock"></i> <?= date('H:i', strtotime($berita['jam_berita'])) ?></span>
                                     <span><i class="bi bi-person"></i> Admin</span>
                                 </div>
 
@@ -375,16 +375,6 @@
                                     </div>
                                 </div>
                             </article>
-
-                            <!-- Navigation -->
-                            <div class="berita-nav">
-                                <a href="<?= base_url('home') ?>" class="btn-nav back">
-                                    <i class="bi bi-arrow-left"></i> Kembali
-                                </a>
-                                <a href="#" class="btn-nav next">
-                                    Berita Selanjutnya <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 <?php else: ?>
