@@ -21,6 +21,8 @@ class Berita extends BaseController
         return view('v_template_back_end', $data);
     }
 
+
+
     public function Input()
     {
         $data = [

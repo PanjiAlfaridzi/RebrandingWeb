@@ -124,15 +124,15 @@
                 <?php foreach ($berita as $item) : ?>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
                         <div class="course-item">
-                            <img src="<?= base_url('foto/' . $item['gambar_berita']) ?>" class="img-fluid" alt="...">
+                            <img src="<?= base_url('foto/' . esc($item['gambar_berita'])) ?>" class="img-fluid" alt="...">
                             <div class="course-content">
-                                <h3><a href="#"><?= $item['judul_berita'] ?></a></h3>
+                                <h3><a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a></h3>
                                 <p>
-                                    <?= substr(strip_tags($item['isi_berita']), 0, 150) . '...' ?>
+                                    <?= esc(substr(strip_tags($item['isi_berita']), 0, 150)) . '...' ?>
                                 </p>
                                 <div class="trainer d-flex justify-content-end">
                                     <div class="trainer-profile">
-                                        <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                                        <a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
