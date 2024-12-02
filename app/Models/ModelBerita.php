@@ -42,5 +42,7 @@ class ModelBerita extends Model
             ->get()->getRowArray();
     }
 
+
+
     // Method baru untuk mengambil berita terbaru
 }

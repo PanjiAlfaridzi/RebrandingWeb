@@ -241,6 +241,72 @@
                 gap: 20px;
             }
         }
+
+        /* Styling untuk text dalam kolom */
+        .entry-content {
+            /* Format dasar */
+            text-align: justify;
+            /* Membuat text rata kiri-kanan */
+            white-space: pre-line;
+            /* Menghormati line break */
+            word-wrap: break-word;
+            /* Memastikan kata panjang tidak overflow */
+            overflow-wrap: break-word;
+
+            /* Spacing */
+            line-height: 1.6;
+            /* Jarak antar baris */
+            letter-spacing: 0.3px;
+            /* Jarak antar huruf */
+
+            /* Padding dan margin */
+            padding: 15px;
+            margin: 0;
+
+            /* Format paragraf */
+            text-indent: 30px;
+            /* Indent awal paragraf */
+        }
+
+        /* Memastikan paragraf terformat dengan baik */
+        .entry-content p {
+            margin-bottom: 1.5em;
+            /* Menambahkan spasi 1.5em di bawah setiap paragraf */
+            margin-top: 0;
+            line-height: 1.6;
+            /* Mengatur jarak antar baris dalam paragraf */
+        }
+
+        /* Mengatur list jika ada */
+        .entry-content ul,
+        .entry-content ol {
+            padding-left: 20px;
+            margin: 1em 0;
+        }
+
+        /* Mengatur heading jika ada */
+        .entry-content h1,
+        .entry-content h2,
+        .entry-content h3,
+        .entry-content h4,
+        .entry-content h5,
+        .entry-content h6 {
+            margin: 1em 0 0.5em 0;
+            line-height: 1.4;
+        }
+
+        /* Mengatur tabel jika ada */
+        .entry-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+
+        .entry-content td,
+        .entry-content th {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
     </style>
 
     <!-- =======================================================
