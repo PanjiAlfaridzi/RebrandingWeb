@@ -43,7 +43,9 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td class="text-center"><?= $p['judul_berita'] ?></td>
-                            <td class="text-center"><img src="<?= base_url('foto/' . $p['gambar_berita']) ?>" width="250px" alt=""></td>
+                            <td class="text-center">
+                                <img src="<?= base_url('/image/iberita/' . $p['gambar_berita']) ?>" width="250px" alt="">
+                            </td>
                             <td class="text-center"><?= $p['isi_berita'] ?></td>
                             <td><?= $p['tgl_berita'] ?> <?= $p['jam_berita'] ?></td>
                             <td>

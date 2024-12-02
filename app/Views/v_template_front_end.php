@@ -124,7 +124,7 @@
                 <?php foreach ($berita as $item) : ?>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
                         <div class="card-berita shadow-sm h-100">
-                            <img src="<?= base_url('foto/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
+                            <img src="<?= base_url('image/iberita/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
                             <div class="card-body d-flex flex-column">
                                 <h3><a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a></h3>
                                 <p>

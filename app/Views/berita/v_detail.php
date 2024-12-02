@@ -406,7 +406,7 @@
                             <article class="entry">
                                 <!-- Berita Image Container -->
                                 <div class="entry-img-container mb-4">
-                                    <img src="<?= base_url('foto/' . $berita['gambar_berita']) ?>"
+                                    <img src="<?= base_url('image/iberita/' . $berita['gambar_berita']) ?>"
                                         alt="<?= $berita['judul_berita'] ?>"
                                         class="entry-img">
                                 </div>

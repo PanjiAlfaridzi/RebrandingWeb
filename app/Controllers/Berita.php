@@ -40,7 +40,7 @@ class Berita extends BaseController
         // Pastikan file valid
         if ($fileGambar->isValid() && !$fileGambar->hasMoved()) {
             // Tentukan folder tujuan dan nama file
-            $folderTujuan = FCPATH . 'foto'; // Ganti dengan path folder yang diinginkan
+            $folderTujuan = FCPATH . 'image/iberita'; // Ganti dengan path folder yang diinginkan
             $fileName = $fileGambar->getRandomName(); // Mendapatkan nama file acak
 
             // Pindahkan file ke folder tujuan
@@ -83,7 +83,7 @@ class Berita extends BaseController
         // Jika ada file gambar yang diupload
         if ($fileGambar && $fileGambar->isValid() && !$fileGambar->hasMoved()) {
             // Tentukan folder tujuan dan nama file
-            $folderTujuan = FCPATH . 'foto'; // Ganti dengan path folder yang sesuai
+            $folderTujuan = FCPATH . 'image/iberita'; // Ganti dengan path folder yang sesuai
             $fileName = $fileGambar->getRandomName(); // Mendapatkan nama file acak
 
             // Pindahkan file ke folder tujuan
