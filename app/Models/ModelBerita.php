@@ -6,9 +6,10 @@ use CodeIgniter\Model;
 
 class ModelBerita extends Model
 {
-    protected $table = 'tbl_berita'; // Nama tabel
-    protected $primaryKey = 'id_berita'; // Primary key tabel
+    protected $table = 'tbl_berita';
+    protected $primaryKey = 'id_berita';
     protected $allowedFields = ['judul_berita', 'isi_berita', 'gambar_berita'];
+
     public function AllData()
     {
         return $this->db->table('tbl_berita')
@@ -33,4 +34,13 @@ class ModelBerita extends Model
             ->where('id_berita', $data['id_berita'])
             ->delete($data);
     }
+
+    public function DetailBerita($id_berita)
+    {
+        return $this->db->table('tbl_berita')
+            ->where('id_berita', $id_berita)
+            ->get()->getRowArray();
+    }
+
+    // Method baru untuk mengambil berita terbaru
 }
