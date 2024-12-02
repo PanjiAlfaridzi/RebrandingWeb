@@ -140,6 +140,11 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+            <!-- Pagination -->
+            <div class="pagination d-flex justify-content-center">
+                <?= $pagination_links ?>
+            </div>
+        </div>
         </div>
     </section><!-- End News Section -->
 
