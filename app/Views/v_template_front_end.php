@@ -112,6 +112,38 @@
         </div>
     </section><!-- End Hero -->
 
+    <!-- ======= News Section ======= -->
+    <section id="news" class="courses">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Berita</h2>
+                <p>Berita Terbaru</p>
+            </div>
+
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                <?php foreach ($berita as $item) : ?>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+                        <div class="course-item">
+                            <img src="<?= base_url('foto/' . $item['gambar_berita']) ?>" class="img-fluid" alt="...">
+                            <div class="course-content">
+                                <h3><a href="#"><?= $item['judul_berita'] ?></a></h3>
+                                <p>
+                                    <?= substr(strip_tags($item['isi_berita']), 0, 150) . '...' ?>
+                                </p>
+                                <div class="trainer d-flex justify-content-end">
+                                    <div class="trainer-profile">
+                                        <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section><!-- End News Section -->
+
+    <!-- Profile-->
     <main id="main">
 
         <section id="about" class="about">
@@ -130,39 +162,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- ======= News Section ======= -->
-        <section id="news" class="courses">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Berita</h2>
-                    <p>Berita Terbaru</p>
-                </div>
-
-                <div class="row" data-aos="zoom-in" data-aos-delay="100">
-                    <?php foreach ($berita as $item) : ?>
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                            <div class="course-item">
-                                <img src="<?= base_url('foto/' . $item['gambar_berita']) ?>" class="img-fluid" alt="...">
-                                <div class="course-content">
-                                    <h3><a href="#"><?= $item['judul_berita'] ?></a></h3>
-                                    <p>
-                                        <?= substr(strip_tags($item['isi_berita']), 0, 150) . '...' ?>
-                                    </p>
-                                    <div class="trainer d-flex justify-content-end">
-                                        <div class="trainer-profile">
-                                            <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </section><!-- End News Section -->
-
-
 
     </main><!-- End #main -->
 
