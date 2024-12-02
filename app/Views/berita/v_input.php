@@ -3,9 +3,7 @@
         <div class="card-header">
             <div class="card-title"><i class="fa fa-table"></i>Data <?= $judul ?></div>
         </div>
-        <?php
-        echo form_open('Berita/InsertData', ['enctype' => 'multipart/form-data']);
-        ?>
+        <?php echo form_open('Berita/InsertData', ['enctype' => 'multipart/form-data']); ?>
         <div class="card-body">
             <div class="form-group">
                 <label>Judul Berita</label>
@@ -23,17 +21,16 @@
                 <a href="<?= base_url('index.php/Berita') ?>" class="btn btn-secondary">Kembali</a>
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
-
         </div>
-        <?php
-        echo form_close()
-        ?>
+        <?php echo form_close() ?>
     </div>
 </div>
 
 <script>
-    $('#summernote').summernote({
-        placeholder: 'Isi Berita',
-        height: 250
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            placeholder: 'Isi Berita',
+            height: 250
+        });
     });
 </script>

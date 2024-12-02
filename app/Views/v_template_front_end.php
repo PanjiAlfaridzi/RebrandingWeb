@@ -28,6 +28,24 @@
     <!-- Template Main CSS File -->
     <link href="<?= base_url('front-end') ?>/assets/css/style.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <style>
+        .body{
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .card-berita { 
+            overflow: hidden; 
+        } 
+        .card-berita img { 
+            transition: transform 0.2s ease; 
+        } 
+        .card-berita:hover img { 
+            transform: scale(1.1); /* Zoom-in gambar saat kursor berada di atas kartu */ 
+            filter: brightness(70%);
+        }
+    </style>
+
     <!-- =======================================================
   * Template Name: Mentor - v4.9.1
   * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
@@ -50,10 +68,10 @@
 
                     <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Visi, Misi dan Tujuan</a></li>
-                            <li><a href="#">Sejarah</a></li>
-                            <li><a href="#">Struktur Organisasi</a></li>
-                            <li><a href="#">Tugas dan Fungsi</a></li>
+                        <li><a href="<?= base_url('/index.php/Visi')?>">Visi, Misi dan Tujuan</a></li>
+                            <li><a href="">Sejarah</a></li>
+                            <li><a href="<?= base_url('/index.php/Struktur')?>">Struktur Organisasi</a></li>
+                            <li><a href="<?= base_url('/index.php/Tugas')?>">Tugas dan Fungsi</a></li>
                             <li><a href="#">Kepegawaian</a></li>
                         </ul>
                     </li>
@@ -124,17 +142,16 @@
                 <?php foreach ($berita as $item) : ?>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
                         <div class="card-berita shadow-sm h-100">
-                            <img src="<?= base_url('image/iberita/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
-                            <div class="card-body d-flex flex-column">
-                                <h3><a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a></h3>
-                                <p>
+                        <img src="<?= base_url('image/iberita/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
+                            <div class="card-body my-1 d-flex flex-column">
+                                <h4 class="mx-auto mt-2"><a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a></h3>
+                                <p class="mx-2">
                                     <?= esc(substr(strip_tags($item['isi_berita']), 0, 150)) . '...' ?>
                                 </p>
                                 <div class="mt-auto text-center mb-3">
                                     <div class="trainer-profile">
                                         <a href="<?= base_url('berita/detail/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -147,9 +164,13 @@
                 <?= $pagination_links ?>
             </div>
         </div>
-    </section><!-- End News Section -->
+    </section>
 
+    <!-- End News Section -->
+
+    <!-- Profile-->
     <main id="main">
+
         <section id="about" class="about">
             <div class="container" data-aos="fade-up">
                 <div class="row">
@@ -161,16 +182,15 @@
                         </p>
                     </div>
                     <div class="col-lg-6 order-2" data-aos="fade-left" data-aos-delay="100">
-                        <img src="<?= base_url('logo/about.jpg') ?>"
-                            style="width: 350px; float: right;"
-                            class="img-fluid" alt="">
+                        <img src=<?= base_url('logo/about.jpg') ?> class=" img-fluid" alt="">
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
+    </main><!-- End #main -->
 
+    <!-- ======= Footer ======= -->
     <footer id="footer" class="bg-light text-dark py-4">
         <div class="container d-flex flex-wrap justify-content-between align-items-center">
             <!-- Left Section: About, Quick Links, Contact, and Social Media -->
@@ -229,11 +249,7 @@
         <div class="text-center mt-3">
             <p>&copy; <?= date('Y') ?> Kominfo Semarang. All Rights Reserved.</p>
         </div>
-    </footer>
-
-
-
-
+    </footer><!-- End Footer -->
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
