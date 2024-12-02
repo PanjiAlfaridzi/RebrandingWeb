@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: #444444;
 }
 
@@ -1592,20 +1592,18 @@ section {
 }
 
 .card-berita {
-  height: 100%;
-  /* Menyebabkan card menyesuaikan tinggi dengan container */
-  width: 100%;
-  /* Menyebabkan card mengambil lebar penuh container */
+  height: 100%; /* Menyebabkan card menyesuaikan tinggi dengan container */
+  width: 100%; /* Menyebabkan card mengambil lebar penuh container */
 }
 
 .card-img-top {
-  height: 200px;
-  /* Tentukan tinggi gambar yang diinginkan */
-  object-fit: cover;
-  /* Agar gambar memenuhi ruang yang tersedia tanpa merubah rasio aspek */
+  height: 200px; /* Tentukan tinggi gambar yang diinginkan */
+  object-fit: cover; /* Agar gambar memenuhi ruang yang tersedia tanpa merubah rasio aspek */
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
 }
+
+
