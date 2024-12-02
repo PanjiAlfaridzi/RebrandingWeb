@@ -392,7 +392,7 @@
         <div class="breadcrumbs">
             <div class="container">
                 <h2><?= $judul ?></h2>
-                <p>Detail berita terkini dari Dinas Perikanan Kota Semarang </p>
+                <p>berita terkini dari Dinas Perikanan Kota Semarang </p>
             </div>
         </div>
 

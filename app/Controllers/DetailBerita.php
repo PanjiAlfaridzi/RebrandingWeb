@@ -45,7 +45,7 @@ class DetailBerita extends BaseController
         // Format isi berita sebelum ditampilkan
         $data['berita']['isi_berita'] = $this->formatBeritaContent($data['berita']['isi_berita']);
 
-        $data['judul'] = 'Detail Berita';
+        $data['judul'] = 'Berita terkini';
         return view('berita/v_detail', $data);
     }
 }
