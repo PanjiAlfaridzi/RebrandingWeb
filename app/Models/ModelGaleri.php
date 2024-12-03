@@ -8,8 +8,8 @@ class ModelGaleri extends Model
 {
     protected $table = 'tbl_galeri';
     protected $primaryKey = 'id_galeri';
-    // Di ModelGaleri.php
-    protected $allowedFields = ['judul_galeri', 'file_galeri', 'tgl_galeri', 'jam_galeri'];
+    protected $allowedFields = ['judul_galeri', 'isi_galeri', 'file_galeri'];
+
     public function AllData()
     {
         return $this->db->table('tbl_galeri')
@@ -35,6 +35,12 @@ class ModelGaleri extends Model
             ->delete($data);
     }
 
+    public function DetailBerita($id_berita)
+    {
+        return $this->db->table('tbl_berita')
+            ->where('id_berita', $id_berita)
+            ->get()->getRowArray();
+    }
 
 
 

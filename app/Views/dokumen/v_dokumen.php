@@ -23,14 +23,14 @@
                 echo '</div>';
             }
             ?>
-            <a href="<?= base_url('index.php/dokumen/Input') ?>" type="button" class="btn btn-primary btn-sm">
+            <a href="<?= base_url('index.php/Dokumen/Input') ?>" type="button" class="btn btn-primary btn-sm">
                 <i class="fas fa-plus mr-2"></i>Tambah Data
             </a>
             <table id="basic-datatables" class="table table-striped table-hover table-bordered-bd-primary table-head-bg-primary mt-3">
                 <thead>
                     <tr class="text-center">
                         <th width="50px">#</th>
-                        <th scope="col">Judul dokumen</th>
+                        <th scope="col">Judul Dokumen</th>
                         <th scope="col">Gambar</th>
                         <th scope="col">Tanggal</th>
                         <th width="100px">Aksi</th>
@@ -81,41 +81,47 @@
                     <h5 class="modal-title" id="exampleModalLabel">Edit Data Dokumen</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <?php echo form_open_multipart('dokumen/UpdateData/' . $p['id_dokumen']); ?>
+                <?php echo form_open_multipart('Dokumen/UpdateData/' . $p['id_dokumen'], ['enctype' => 'multipart/form-data']); ?>
                 <div class="modal-body">
-                    <div class="form-group mb-3">
+                    <div class="form-group">
                         <label>Judul Dokumen</label>
-                        <input name="judul_dokumen" value="<?= $p['judul_dokumen'] ?>" class="form-control" placeholder="Judul Dokumen" required>
-                    </div>
+                        <input name="judul_dokumen" value="<?= $p['judul_dokumen'] ?>" class="form-control" placeholder="Judul dokumen" required>
 
-                    <div class="form-group mb-3">
-                        <label>File PDF Saat Ini</label>
-                        <div class="mb-2">
-                            <?php if (!empty($p['file_dokumen'])) : ?>
-                                <a href="<?= base_url('/image/fdokumen/' . $p['file_dokumen']) ?>" target="_blank" class="btn btn-sm btn-info">
-                                    <i class="fa fa-file-pdf"></i> Lihat PDF Saat Ini
-                                </a>
-                            <?php else : ?>
-                                <p class="text-muted">Tidak ada file PDF</p>
-                            <?php endif; ?>
-                        </div>
-
-                        <label>Upload File PDF Baru</label>
-                        <input type="file" name="file_dokumen" class="form-control" accept=".pdf">
-                        <small class="form-text text-muted">Biarkan kosong jika tidak ingin mengubah file PDF. Maksimal ukuran 5MB</small>
+                        <label>dokumen</label>
+                        <input type="file" name="file_dokumen" class="form-control">
+                        <small class="form-text text-muted">Biarkan kosong jika tidak ingin mengubah gambar.</small>
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                <?php echo form_close(); ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="delete<?= $p['id_dokumen'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <?php echo form_open('Dokumen/DeleteData/' . $p['id_dokumen']); ?>
+                <div class="modal-body">
+                    Apakah Ingin Hapus Data <b><?= $p['judul_dokumen'] ?></b> ..?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
                 </div>
                 <?php echo form_close(); ?>
             </div>
         </div>
     </div>
 <?php } ?>
-
 
 <script>
     $(document).ready(function() {
