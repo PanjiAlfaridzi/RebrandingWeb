@@ -239,27 +239,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center; /* Agar teks dan elemen ul sejajar di tengah */
-    margin-bottom: 0px; /* Jarak antara icon dan teks */
+    margin-bottom: 10px; /* Jarak antara icon dan teks */
 }
 
 .icon-text i {
     font-size: 2rem; /* Sesuaikan ukuran ikon sesuai kebutuhan */
-    margin-bottom: 0px; /* Jarak antara ikon dan teks */
+    margin-bottom: 5px; /* Jarak antara ikon dan teks */
 }
 
 .icon-text h4 {
-    margin-bottom: 0px; /* Jarak antara h4 dan ul */
+    margin-bottom: 10px; /* Jarak antara h4 dan ul */
 }
 
 .list-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center; /* Agar list sejajar di tengah */
-    margin-top: 0px; /* mt-2 equivalent, jarak antara ul dan h4 */
+    margin-top: 10px; /* mt-2 equivalent, jarak antara ul dan h4 */
     flex-grow: 1; /* Agar elemen ul memenuhi tinggi yang tersedia */
 }
 
-ul {
+.custom-list {
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -268,9 +268,10 @@ ul {
     width: 100%; /* Pastikan ul memenuhi lebar wrapper */
 }
 
-li {
+.custom-list-item {
     margin: 5px 0; /* Jarak antara item list */
 }
+
 
 
     </style>
@@ -375,12 +376,12 @@ li {
                         <h4>Tugas</h4>
                     </div>
                     <div class="list-wrapper">
-                        <ul>
-                            <li>Melaksanakan pengelolaan sumber daya perikanan.</li>
-                            <li>Menetapkan kebijakan sektor perikanan di Kota Semarang.</li>
-                            <li>Menyelenggarakan pengawasan dan pengendalian kegiatan perikanan.</li>
-                            <li>Memberikan izin usaha perikanan kepada pihak yang berwenang.</li>
-                            <li>Melakukan pemberdayaan masyarakat dalam bidang perikanan.</li>
+                        <ul class="custom-list">
+                            <li class="custom-list-item">Melaksanakan pengelolaan sumber daya perikanan.</li>
+                            <li class="custom-list-item">Menetapkan kebijakan sektor perikanan di Kota Semarang.</li>
+                            <li class="custom-list-item">Menyelenggarakan pengawasan dan pengendalian kegiatan perikanan.</li>
+                            <li class="custom-list-item">Memberikan izin usaha perikanan kepada pihak yang berwenang.</li>
+                            <li class="custom-list-item">Melakukan pemberdayaan masyarakat dalam bidang perikanan.</li>
                         </ul>
                     </div>
                 </div>
@@ -392,12 +393,12 @@ li {
                         <h4>Fungsi</h4>
                     </div>
                     <div class="list-wrapper">
-                        <ul class="py-0">
-                            <li>Fungsi pengawasan perikanan.</li>
-                            <li>Fungsi penelitian dan pengembangan.</li>
-                            <li>Fungsi edukasi dan pelatihan kepada masyarakat.</li>
-                            <li>Fungsi penyuluhan tentang cara pengelolaan sumber daya perikanan secara berkelanjutan.</li>
-                            <li>Fungsi penguatan kelembagaan masyarakat terkait perikanan.</li>
+                        <ul class="custom-list">
+                            <li class="custom-list-item">Fungsi pengawasan perikanan.</li>
+                            <li class="custom-list-item">Fungsi penelitian dan pengembangan.</li>
+                            <li class="custom-list-item">Fungsi edukasi dan pelatihan kepada masyarakat.</li>
+                            <li class="custom-list-item">Fungsi penyuluhan tentang cara pengelolaan sumber daya perikanan secara berkelanjutan.</li>
+                            <li class="custom-list-item">Fungsi penguatan kelembagaan masyarakat terkait perikanan.</li>
                         </ul>
                     </div>
                 </div>
@@ -405,6 +406,7 @@ li {
         </div>
     </div>
 </section>
+
 <!-- End Tugas dan Fungsi Section -->
 
     <footer id="footer">

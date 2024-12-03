@@ -229,7 +229,7 @@
                     <!-- Card for each gallery item -->
                     <div class="card">
                         <!-- Image -->
-                        <img src="<?= base_url('foto/' . $item['file_galeri']); ?>" class="card-img-top" alt="<?= $item['judul_galeri']; ?>">
+                        <img src="<?= base_url('image/igaleri/' . $item['file_galeri']); ?>" class="card-img-top" alt="<?= $item['judul_galeri']; ?>">
                         <div class="card-body">
                             <!-- Card title (Judul) -->
                             <h5 class="card-title"><?= $item['judul_galeri']; ?></h5>

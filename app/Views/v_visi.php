@@ -281,7 +281,7 @@
     flex-grow: 1; /* Agar elemen ul memenuhi tinggi yang tersedia */
 }
 
-ul {
+.custom-list {
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -290,11 +290,9 @@ ul {
     width: 100%; /* Pastikan ul memenuhi lebar wrapper */
 }
 
-li {
+.custom-list-item {
     margin: 5px 0; /* Jarak antara item list */
 }
-
-
 
     </style>
 </head>
@@ -398,8 +396,8 @@ li {
                         <h4>Visi</h4>
                     </div>
                     <div class="list-wrapper">
-                        <ul>
-                            <li>Mewujudkan Dinas Perikanan Kota Semarang sebagai lembaga yang profesional dalam pengelolaan sumber daya perikanan yang berkelanjutan.</li>
+                        <ul class="custom-list">
+                            <li class="custom-list-item">Mewujudkan Dinas Perikanan Kota Semarang sebagai lembaga yang profesional dalam pengelolaan sumber daya perikanan yang berkelanjutan.</li>
                         </ul>
                     </div>
                 </div>
@@ -411,10 +409,10 @@ li {
                         <h4>Misi</h4>
                     </div>
                     <div class="list-wrapper">
-                        <ul>
-                            <li>Menjamin pengelolaan perikanan yang berkelanjutan dengan pendekatan ekosistem.</li>
-                            <li>Melakukan peningkatan kualitas sumber daya manusia di bidang perikanan.</li>
-                            <li>Menyediakan layanan yang efisien dan mudah diakses masyarakat.</li>
+                        <ul class="custom-list">
+                            <li class="custom-list-item">Menjamin pengelolaan perikanan yang berkelanjutan dengan pendekatan ekosistem.</li>
+                            <li class="custom-list-item">Melakukan peningkatan kualitas sumber daya manusia di bidang perikanan.</li>
+                            <li class="custom-list-item">Menyediakan layanan yang efisien dan mudah diakses masyarakat.</li>
                         </ul>
                     </div>
                 </div>
@@ -426,9 +424,9 @@ li {
                         <h4>Tujuan</h4>
                     </div>
                     <div class="list-wrapper">
-                        <ul>
-                            <li>Meningkatkan kesejahteraan masyarakat melalui pengelolaan perikanan yang efektif.</li>
-                            <li>Melestarikan sumber daya alam melalui upaya konservasi sumber daya perikanan.</li>
+                        <ul class="custom-list">
+                            <li class="custom-list-item">Meningkatkan kesejahteraan masyarakat melalui pengelolaan perikanan yang efektif.</li>
+                            <li class="custom-list-item">Melestarikan sumber daya alam melalui upaya konservasi sumber daya perikanan.</li>
                         </ul>
                     </div>
                 </div>
@@ -436,6 +434,7 @@ li {
         </div>
     </div>
 </section>
+
 
 
     <footer id="footer">
