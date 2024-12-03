@@ -237,63 +237,76 @@
         }
 
         .equal-height {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 20px; /* Sesuaikan padding sesuai kebutuhan */
-    box-sizing: border-box;
-}
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 20px;
+            /* Sesuaikan padding sesuai kebutuhan */
+            box-sizing: border-box;
+        }
 
-.row.row-cols-1.row-cols-md-3 {
-    display: flex;
-    flex-wrap: wrap;
-}
+        .row.row-cols-1.row-cols-md-3 {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-.row.row-cols-1.row-cols-md-3 > .col-lg-4 {
-    display: flex;
-    flex: 1;
-    flex-direction: column; /* Pastikan setiap kolom adalah kolom vertikal */
-}
+        .row.row-cols-1.row-cols-md-3>.col-lg-4 {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            /* Pastikan setiap kolom adalah kolom vertikal */
+        }
 
-.icon-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Agar teks dan elemen ul sejajar di tengah */
-    margin-bottom: 10px; /* Jarak antara icon dan teks */
-}
+        .icon-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            /* Agar teks dan elemen ul sejajar di tengah */
+            margin-bottom: 10px;
+            /* Jarak antara icon dan teks */
+        }
 
-.icon-text i {
-    font-size: 2rem; /* Sesuaikan ukuran ikon sesuai kebutuhan */
-    margin-bottom: 5px; /* Jarak antara ikon dan teks */
-}
+        .icon-text i {
+            font-size: 2rem;
+            /* Sesuaikan ukuran ikon sesuai kebutuhan */
+            margin-bottom: 5px;
+            /* Jarak antara ikon dan teks */
+        }
 
-.icon-text h4 {
-    margin-bottom: 10px; /* Jarak antara h4 dan ul */
-}
+        .icon-text h4 {
+            margin-bottom: 10px;
+            /* Jarak antara h4 dan ul */
+        }
 
-.list-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Agar list sejajar di tengah */
-    margin-top: 10px; /* mt-2 equivalent, jarak antara ul dan h4 */
-    flex-grow: 1; /* Agar elemen ul memenuhi tinggi yang tersedia */
-}
+        .list-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Agar list sejajar di tengah */
+            margin-top: 10px;
+            /* mt-2 equivalent, jarak antara ul dan h4 */
+            flex-grow: 1;
+            /* Agar elemen ul memenuhi tinggi yang tersedia */
+        }
 
-.custom-list {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column; /* Pastikan list vertikal */
-    justify-content: flex-start; /* Isi dari ul mulai dari atas */
-    width: 100%; /* Pastikan ul memenuhi lebar wrapper */
-}
+        .custom-list {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            /* Pastikan list vertikal */
+            justify-content: flex-start;
+            /* Isi dari ul mulai dari atas */
+            width: 100%;
+            /* Pastikan ul memenuhi lebar wrapper */
+        }
 
-.custom-list-item {
-    margin: 5px 0; /* Jarak antara item list */
-}
-
+        .custom-list-item {
+            margin: 5px 0;
+            /* Jarak antara item list */
+        }
     </style>
 </head>
 
@@ -384,56 +397,56 @@
 
     <!-- ======= Visions Section ======= -->
     <section id="visi-misi" class="visi-misi">
-    <div class="container">
-        <header data-aos="fade-up" data-aos-duration="1000">
-            <h2>Visi, Misi dan Tujuan</h2>
-        </header>
-        <div class="row row-cols-1 row-cols-md-3">
-            <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
-                <div class="content-box equal-height">
-                    <div class="icon-text">
-                        <i class="bi bi-eye" aria-hidden="true"></i>
-                        <h4>Visi</h4>
+        <div class="container">
+            <header data-aos="fade-up" data-aos-duration="1000">
+                <h2>Visi, Misi dan Tujuan</h2>
+            </header>
+            <div class="row row-cols-1 row-cols-md-3">
+                <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="content-box equal-height">
+                        <div class="icon-text">
+                            <i class="bi bi-eye" aria-hidden="true"></i>
+                            <h4>Visi</h4>
+                        </div>
+                        <div class="list-wrapper">
+                            <ul class="custom-list">
+                                <li class="custom-list-item">Mewujudkan Dinas Perikanan Kota Semarang sebagai lembaga yang profesional dalam pengelolaan sumber daya perikanan yang berkelanjutan.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="list-wrapper">
-                        <ul class="custom-list">
-                            <li class="custom-list-item">Mewujudkan Dinas Perikanan Kota Semarang sebagai lembaga yang profesional dalam pengelolaan sumber daya perikanan yang berkelanjutan.</li>
-                        </ul>
+                </article>
+                <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="content-box equal-height">
+                        <div class="icon-text">
+                            <i class="bi bi-flag" aria-hidden="true"></i>
+                            <h4>Misi</h4>
+                        </div>
+                        <div class="list-wrapper">
+                            <ul class="custom-list">
+                                <li class="custom-list-item">Menjamin pengelolaan perikanan yang berkelanjutan dengan pendekatan ekosistem.</li>
+                                <li class="custom-list-item">Melakukan peningkatan kualitas sumber daya manusia di bidang perikanan.</li>
+                                <li class="custom-list-item">Menyediakan layanan yang efisien dan mudah diakses masyarakat.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1200">
-                <div class="content-box equal-height">
-                    <div class="icon-text">
-                        <i class="bi bi-flag" aria-hidden="true"></i>
-                        <h4>Misi</h4>
+                </article>
+                <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="content-box equal-height">
+                        <div class="icon-text">
+                            <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
+                            <h4>Tujuan</h4>
+                        </div>
+                        <div class="list-wrapper">
+                            <ul class="custom-list">
+                                <li class="custom-list-item">Meningkatkan kesejahteraan masyarakat melalui pengelolaan perikanan yang efektif.</li>
+                                <li class="custom-list-item">Melestarikan sumber daya alam melalui upaya konservasi sumber daya perikanan.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="list-wrapper">
-                        <ul class="custom-list">
-                            <li class="custom-list-item">Menjamin pengelolaan perikanan yang berkelanjutan dengan pendekatan ekosistem.</li>
-                            <li class="custom-list-item">Melakukan peningkatan kualitas sumber daya manusia di bidang perikanan.</li>
-                            <li class="custom-list-item">Menyediakan layanan yang efisien dan mudah diakses masyarakat.</li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-            <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1400">
-                <div class="content-box equal-height">
-                    <div class="icon-text">
-                        <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
-                        <h4>Tujuan</h4>
-                    </div>
-                    <div class="list-wrapper">
-                        <ul class="custom-list">
-                            <li class="custom-list-item">Meningkatkan kesejahteraan masyarakat melalui pengelolaan perikanan yang efektif.</li>
-                            <li class="custom-list-item">Melestarikan sumber daya alam melalui upaya konservasi sumber daya perikanan.</li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
