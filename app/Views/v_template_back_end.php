@@ -55,8 +55,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <!-- include summernote css/js -->
-    <link href="<?= base_url('summernote')?>/summernote-bs4.min.css" rel="stylesheet">
-    <script src="<?= base_url('summernote')?>/summernote-bs4.min.js"></script>
+    <link href="<?= base_url('summernote') ?>/summernote-bs4.min.css" rel="stylesheet">
+    <script src="<?= base_url('summernote') ?>/summernote-bs4.min.js"></script>
 
 </head>
 
@@ -104,8 +104,8 @@
                                 <i class="fa fa-search"></i>
                             </a>
                         </li>
-                        
-                        
+
+
                         <li class="nav-item dropdown hidden-caret">
                             <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                                 <div class="avatar-sm">
@@ -212,6 +212,20 @@
                             <a href="<?= base_url('/index.php/Berita') ?>">
                                 <i class="fas fa-newspaper"></i>
                                 <p>Berita</p>
+                                <span class="badge badge-count">5</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('/index.php/Dokumen') ?>">
+                                <i class="fas fa-newspaper"></i>
+                                <p>Dokumen</p>
+                                <span class="badge badge-count">5</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('/index.php/Galeri') ?>">
+                                <i class="fas fa-newspaper"></i>
+                                <p>Galeri</p>
                                 <span class="badge badge-count">5</span>
                             </a>
                         </li>
