@@ -331,10 +331,10 @@
 
                     <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Visi, Misi dan Tujuan</a></li>
-                            <li><a href="#">Sejarah</a></li>
-                            <li><a href="#">Struktur Organisasi</a></li>
-                            <li><a href="#">Tugas dan Fungsi</a></li>
+                            <li><a href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
+                            <li><a href="">Sejarah</a></li>
+                            <li><a href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
+                            <li><a href="<?= base_url('/index.php/Tugas') ?>">Tugas dan Fungsi</a></li>
                             <li><a href="#">Kepegawaian</a></li>
                         </ul>
                     </li>

@@ -31,17 +31,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
     <style>
-        .body{
+        .body {
             font-family: "Plus Jakarta Sans", sans-serif;
         }
-        .card-berita { 
-            overflow: hidden; 
-        } 
-        .card-berita img { 
-            transition: transform 0.2s ease; 
-        } 
-        .card-berita:hover img { 
-            transform: scale(1.1); /* Zoom-in gambar saat kursor berada di atas kartu */ 
+
+        .card-berita {
+            overflow: hidden;
+        }
+
+        .card-berita img {
+            transition: transform 0.2s ease;
+        }
+
+        .card-berita:hover img {
+            transform: scale(1.1);
+            /* Zoom-in gambar saat kursor berada di atas kartu */
             filter: brightness(70%);
         }
     </style>
@@ -58,70 +62,118 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center">
-            <img src=<?= base_url('logo/logo.png') ?> width=50px>
-            <h1 class="logo me-auto"><a href="index.html">Perikanan</a></h1>
+        <div class="container">
+            <!-- Top Header with Logo -->
+            <div class="d-flex align-items-center py-2">
+                <div class="d-flex align-items-center">
+                    <img src="<?= base_url('logo/logo.png') ?>" alt="Logo Dinas Perikanan" class="me-3" style="width: 50px; height: auto;">
+                    <h1 class="logo mb-0">
+                        <a href="<?= base_url() ?>" class="text-decoration-none">
+                            <span class="fs-4 fw-bold d-block">Dinas Perikanan</span>
+                            <span class="fs-6 text-secondary">Kota Semarang</span>
+                        </a>
+                    </h1>
+                </div>
 
-            <nav id="navbar" class="navbar order-last order-lg-0">
-                <ul>
-                    <li><a class="active" href="index.html">Beranda</a></li>
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
 
-                    <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                        <li><a href="<?= base_url('/index.php/Visi')?>">Visi, Misi dan Tujuan</a></li>
-                            <li><a href="">Sejarah</a></li>
-                            <li><a href="<?= base_url('/index.php/Struktur')?>">Struktur Organisasi</a></li>
-                            <li><a href="<?= base_url('/index.php/Tugas')?>">Tugas dan Fungsi</a></li>
-                            <li><a href="#">Kepegawaian</a></li>
-                        </ul>
-                    </li>
+            <!-- Main Navigation -->
+            <nav id="mainNavbar" class="navbar navbar-expand-lg py-0">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav w-100 justify-content-around">
+                        <!-- Beranda -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="<?= base_url() ?>">Beranda</a>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Layanan 1</a></li>
-                            <li><a href="#">Layanan 2</a></li>
-                        </ul>
-                    </li>
+                        <!-- Profil -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Profil <i class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
+                                <li><a class="dropdown-item" href="#">Sejarah</a></li>
+                                <li><a class="dropdown-item" href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
+                                <li><a class="dropdown-item" href="<?= base_url('/index.php/Tugas') ?>">Tugas dan Fungsi</a></li>
+                                <li><a class="dropdown-item" href="#">Kepegawaian</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Berita</a></li>
-                            <li><a href="#">Pengumuman</a></li>
-                            <li><a href="#">Artikel</a></li>
-                            <li><a href="#">Media Informasi</a></li>
-                        </ul>
-                    </li>
+                        <!-- Layanan -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Layanan <i class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Layanan 1</a></li>
+                                <li><a class="dropdown-item" href="#">Layanan 2</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Profil PPID</a></li>
-                            <li><a href="#">Dasar Hukum</a></li>
-                            <li><a href="#">Struktur PPID</a></li>
-                            <li><a href="#">Maklumat Pelayanan</a></li>
-                            <li><a href="#">Standar Layanan</a></li>
-                            <li><a href="#">Prosedur Layanan</a></li>
-                            <li><a href="#">Biaya Layanan</a></li>
-                        </ul>
-                    </li>
+                        <!-- Informasi -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Informasi <i class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Berita</a></li>
+                                <li><a class="dropdown-item" href="#">Pengumuman</a></li>
+                                <li><a class="dropdown-item" href="#">Artikel</a></li>
+                                <li><a class="dropdown-item" href="#">Media Informasi</a></li>
+                            </ul>
+                        </li>
 
-                    <li><a href="#">Dokumen Perencanaan</a></li>
-                    <li><a href="#">Peraturan Perundangan</a></li>
+                        <!-- PPID -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                PPID <i class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profil PPID</a></li>
+                                <li><a class="dropdown-item" href="#">Dasar Hukum</a></li>
+                                <li><a class="dropdown-item" href="#">Struktur PPID</a></li>
+                                <li><a class="dropdown-item" href="#">Maklumat Pelayanan</a></li>
+                                <li><a class="dropdown-item" href="#">Standar Layanan</a></li>
+                                <li><a class="dropdown-item" href="#">Prosedur Layanan</a></li>
+                                <li><a class="dropdown-item" href="#">Biaya Layanan</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Galeri</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Foto</a></li>
-                            <li><a href="#">Video</a></li>
-                        </ul>
-                    </li>
+                        <!-- Dokumen -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dokumen Perencanaan</a>
+                        </li>
 
-                    <li><a href="contact.html">Kontak</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
+                        <!-- Peraturan -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Peraturan Perundangan</a>
+                        </li>
+
+                        <!-- Galeri -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Galeri <i class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Foto</a></li>
+                                <li><a class="dropdown-item" href="#">Video</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Kontak -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('kontak') ?>">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-
         </div>
     </header>
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex justify-content-center align-items-center">
         <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
@@ -142,17 +194,17 @@
                 <?php foreach ($berita as $item) : ?>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
                         <div class="card-berita shadow-sm h-100">
-                        <img src="<?= base_url('image/iberita/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
+                            <img src="<?= base_url('image/iberita/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
                             <div class="card-body my-1 d-flex flex-column">
                                 <h4 class="mx-auto mt-2"><a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a></h3>
-                                <p class="mx-2">
-                                    <?= esc(substr(strip_tags($item['isi_berita']), 0, 150)) . '...' ?>
-                                </p>
-                                <div class="mt-auto text-center mb-3">
-                                    <div class="trainer-profile">
-                                        <a href="<?= base_url('berita/detail/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                                    <p class="mx-2">
+                                        <?= esc(substr(strip_tags($item['isi_berita']), 0, 150)) . '...' ?>
+                                    </p>
+                                    <div class="mt-auto text-center mb-3">
+                                        <div class="trainer-profile">
+                                            <a href="<?= base_url('berita/detail/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                                        </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
