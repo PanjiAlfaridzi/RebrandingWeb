@@ -112,67 +112,84 @@
 <body>
         <!-- ======= Header ======= -->
         <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center">
-            <img src=<?= base_url('logo/logo.png') ?> width=50px>
-            <h1 class="logo me-auto"><a href="index.html">Perikanan</a></h1>
+        <div class="container">
+            <!-- Top Header with Logo -->
+            <div class="d-flex align-items-center py-2">
+                <div class="d-flex align-items-center">
+                    <img src="<?= base_url('logo/logo.png') ?>" alt="Logo Dinas Perikanan" class="me-3" style="width: 50px; height: auto;">
+                    <h1 class="logo mb-0">
+                        <a href="<?= base_url() ?>" class="text-decoration-none">
+                            <span class="fs-4 fw-bold d-block">Dinas Perikanan</span>
+                            <span class="fs-6 text-secondary">Kota Semarang</span>
+                        </a>
+                    </h1>
+                </div>
 
-            <nav id="navbar" class="navbar order-last order-lg-0">
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
 
-                    <li class="dropdown"><a class="active" href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="<?= base_url('/index.php/Visi')?>">Visi, Misi dan Tujuan</a></li>
-                            <li><a href="#">Sejarah</a></li>
-                            <li><a href="<?= base_url('/index.php/Struktur')?>">Struktur Organisasi</a></li>
-                            <li><a href="<?= base_url('/index.php/Tugas')?>">Tugas dan Fungsi</a></li>
-                            <li><a href="#">Kepegawaian</a></li>
-                        </ul>
-                    </li>
+            <!-- Main Navigation -->
+            <nav id="mainNavbar" class="navbar navbar-expand-lg py-0">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav w-100 justify-content-around">
+                        <!-- Beranda -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="<?= base_url() ?>">Beranda</a>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Layanan 1</a></li>
-                            <li><a href="#">Layanan 2</a></li>
-                        </ul>
-                    </li>
+                        <!-- Profil -->
+                        <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
+                                <li><a href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
+                                <li><a href="#">Kepala Dinas</a></li>
+                                <li><a href="#">Tupoksi</a></li>
+                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tugas dan Fungsi</a></li>
+                                <li><a href="#">Bidang & UPTD</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Berita</a></li>
-                            <li><a href="#">Pengumuman</a></li>
-                            <li><a href="#">Artikel</a></li>
-                            <li><a href="#">Media Informasi</a></li>
-                        </ul>
-                    </li>
+                        <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#">Kartu Nelayan</a></li>
+                                <li><a href="#">Asuransi Nelayan</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Profil PPID</a></li>
-                            <li><a href="#">Dasar Hukum</a></li>
-                            <li><a href="#">Struktur PPID</a></li>
-                            <li><a href="#">Maklumat Pelayanan</a></li>
-                            <li><a href="#">Standar Layanan</a></li>
-                            <li><a href="#">Prosedur Layanan</a></li>
-                            <li><a href="#">Biaya Layanan</a></li>
-                        </ul>
-                    </li>
+                        <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#">Berita</a></li>
+                                <li><a href="#">Artikel</a></li>
+                                <li><a href="#">Agenda (Rencana Kegiatan)</a></li>
+                                <li><a href="#">Sop Renja</a></li>
+                            </ul>
+                        </li>
 
-                    <li><a href="#">Dokumen Perencanaan</a></li>
-                    <li><a href="#">Peraturan Perundangan</a></li>
+                        <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#">Dasar Hukum</a></li>
+                                <li><a href="#">Layanan Informasi</a></li>
+                                <li><a href="#">Informasi Berkala</a></li>
+                                <li><a href="#">Informasi Serta Merta</a></li>
+                                <li><a href="#">Informasi Setiap Saat</a></li>
+                                <li><a href="#">Informasi Dikecualikan</a></li>
+                                <li><a href="#">Profil PPID</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Galeri</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Foto</a></li>
-                            <li><a href="#">Video</a></li>
-                        </ul>
-                    </li>
+                        <li><a href="/Dokumen">Dokumen Perencanaan</a></li>
+                        <li><a href="#">Peraturan Perundangan</a></li>
 
-                    <li><a href="contact.html">Kontak</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
+                        <li><a href="<?= base_url('/index.php/Gallerynav') ?>"><span>Galeri</span></a>
+                        </li>
+
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
             </nav>
-
         </div>
     </header>
 

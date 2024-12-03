@@ -235,6 +235,67 @@
         .visi-misi .content-box ul {
             padding-left: 20px;
         }
+
+        .equal-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px; /* Sesuaikan padding sesuai kebutuhan */
+    box-sizing: border-box;
+}
+
+.row.row-cols-1.row-cols-md-3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.row-cols-1.row-cols-md-3 > .col-lg-4 {
+    display: flex;
+    flex: 1;
+    flex-direction: column; /* Pastikan setiap kolom adalah kolom vertikal */
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Agar teks dan elemen ul sejajar di tengah */
+    margin-bottom: 10px; /* Jarak antara icon dan teks */
+}
+
+.icon-text i {
+    font-size: 2rem; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+    margin-bottom: 5px; /* Jarak antara ikon dan teks */
+}
+
+.icon-text h4 {
+    margin-bottom: 10px; /* Jarak antara h4 dan ul */
+}
+
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Agar list sejajar di tengah */
+    margin-top: 10px; /* mt-2 equivalent, jarak antara ul dan h4 */
+    flex-grow: 1; /* Agar elemen ul memenuhi tinggi yang tersedia */
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Pastikan list vertikal */
+    justify-content: flex-start; /* Isi dari ul mulai dari atas */
+    width: 100%; /* Pastikan ul memenuhi lebar wrapper */
+}
+
+li {
+    margin: 5px 0; /* Jarak antara item list */
+}
+
+
+
     </style>
 </head>
 
@@ -242,86 +303,114 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center">
-            <img src=<?= base_url('logo/logo.png') ?> width=50px>
-            <h1 class="logo me-auto"><a href="index.html">Perikanan</a></h1>
+        <div class="container">
+            <!-- Top Header with Logo -->
+            <div class="d-flex align-items-center py-2">
+                <div class="d-flex align-items-center">
+                    <img src="<?= base_url('logo/logo.png') ?>" alt="Logo Dinas Perikanan" class="me-3" style="width: 50px; height: auto;">
+                    <h1 class="logo mb-0">
+                        <a href="<?= base_url() ?>" class="text-decoration-none">
+                            <span class="fs-4 fw-bold d-block">Dinas Perikanan</span>
+                            <span class="fs-6 text-secondary">Kota Semarang</span>
+                        </a>
+                    </h1>
+                </div>
 
-            <nav id="navbar" class="navbar order-last order-lg-0">
-                <ul>
-                    <li><a class="" href="index.html">Beranda</a></li>
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
 
-                    <li class="dropdown"><a class="active" href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
-                            <li><a href="#">Sejarah</a></li>
-                            <li><a href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
-                            <li><a href="<?= base_url('/index.php/Tugas') ?>">Tugas dan Fungsi</a></li>
-                            <li><a href="#">Kepegawaian</a></li>
-                        </ul>
-                    </li>
+            <!-- Main Navigation -->
+            <nav id="mainNavbar" class="navbar navbar-expand-lg py-0">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav w-100 justify-content-around">
+                        <!-- Beranda -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="<?= base_url() ?>">Beranda</a>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Layanan 1</a></li>
-                            <li><a href="#">Layanan 2</a></li>
-                        </ul>
-                    </li>
+                        <!-- Profil -->
+                        <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
+                                <li><a href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
+                                <li><a href="#">Kepala Dinas</a></li>
+                                <li><a href="#">Tupoksi</a></li>
+                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tugas dan Fungsi</a></li>
+                                <li><a href="#">Bidang & UPTD</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Berita</a></li>
-                            <li><a href="#">Pengumuman</a></li>
-                            <li><a href="#">Artikel</a></li>
-                            <li><a href="#">Media Informasi</a></li>
-                        </ul>
-                    </li>
+                        <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#">Kartu Nelayan</a></li>
+                                <li><a href="#">Asuransi Nelayan</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Profil PPID</a></li>
-                            <li><a href="#">Dasar Hukum</a></li>
-                            <li><a href="#">Struktur PPID</a></li>
-                            <li><a href="#">Maklumat Pelayanan</a></li>
-                            <li><a href="#">Standar Layanan</a></li>
-                            <li><a href="#">Prosedur Layanan</a></li>
-                            <li><a href="#">Biaya Layanan</a></li>
-                        </ul>
-                    </li>
+                        <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#">Berita</a></li>
+                                <li><a href="#">Artikel</a></li>
+                                <li><a href="#">Agenda (Rencana Kegiatan)</a></li>
+                                <li><a href="#">Sop Renja</a></li>
+                            </ul>
+                        </li>
 
-                    <li><a href="#">Dokumen Perencanaan</a></li>
-                    <li><a href="#">Peraturan Perundangan</a></li>
+                        <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#">Dasar Hukum</a></li>
+                                <li><a href="#">Layanan Informasi</a></li>
+                                <li><a href="#">Informasi Berkala</a></li>
+                                <li><a href="#">Informasi Serta Merta</a></li>
+                                <li><a href="#">Informasi Setiap Saat</a></li>
+                                <li><a href="#">Informasi Dikecualikan</a></li>
+                                <li><a href="#">Profil PPID</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Galeri</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Foto</a></li>
-                            <li><a href="#">Video</a></li>
-                        </ul>
-                    </li>
+                        <li><a href="/Dokumen">Dokumen Perencanaan</a></li>
+                        <li><a href="#">Peraturan Perundangan</a></li>
 
-                    <li><a href="contact.html">Kontak</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
+                        <li><a href="<?= base_url('/index.php/Gallerynav') ?>"><span>Galeri</span></a>
+                        </li>
+
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
             </nav>
-
         </div>
     </header>
 
     <!-- ======= Visions Section ======= -->
     <section id="visi-misi" class="visi-misi">
-        <div class="container">
-            <h2 data-aos="fade-up" data-aos-duration="1000">Visi, Misi dan Tujuan</h2>
-            <div class="row row-cols-1 row-cols-md-3">
-                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="content-box">
-                        <i class="bi bi-eye"></i>
+    <div class="container">
+        <header data-aos="fade-up" data-aos-duration="1000">
+            <h2>Visi, Misi dan Tujuan</h2>
+        </header>
+        <div class="row row-cols-1 row-cols-md-3">
+            <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                <div class="content-box equal-height">
+                    <div class="icon-text">
+                        <i class="bi bi-eye" aria-hidden="true"></i>
                         <h4>Visi</h4>
-                        <p>Mewujudkan Dinas Perikanan Kota Semarang sebagai lembaga yang profesional dalam pengelolaan sumber daya perikanan yang berkelanjutan.</p>
+                    </div>
+                    <div class="list-wrapper">
+                        <ul>
+                            <li>Mewujudkan Dinas Perikanan Kota Semarang sebagai lembaga yang profesional dalam pengelolaan sumber daya perikanan yang berkelanjutan.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1200">
-                    <div class="content-box">
-                        <i class="bi bi-flag"></i>
+            </article>
+            <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+                <div class="content-box equal-height">
+                    <div class="icon-text">
+                        <i class="bi bi-flag" aria-hidden="true"></i>
                         <h4>Misi</h4>
+                    </div>
+                    <div class="list-wrapper">
                         <ul>
                             <li>Menjamin pengelolaan perikanan yang berkelanjutan dengan pendekatan ekosistem.</li>
                             <li>Melakukan peningkatan kualitas sumber daya manusia di bidang perikanan.</li>
@@ -329,19 +418,25 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1400">
-                    <div class="content-box">
-                        <i class="bi bi-arrow-repeat"></i>
+            </article>
+            <article class="col-lg-4" data-aos="fade-up" data-aos-duration="1400">
+                <div class="content-box equal-height">
+                    <div class="icon-text">
+                        <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
                         <h4>Tujuan</h4>
+                    </div>
+                    <div class="list-wrapper">
                         <ul>
                             <li>Meningkatkan kesejahteraan masyarakat melalui pengelolaan perikanan yang efektif.</li>
                             <li>Melestarikan sumber daya alam melalui upaya konservasi sumber daya perikanan.</li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <footer id="footer">
 

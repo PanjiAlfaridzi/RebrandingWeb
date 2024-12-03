@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>WEB Dinas Perikanan Kota Semarang- <?= $judul ?></title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB Dinas Perikanan Kota Semarang - <?= $judul_galeri ?></title>
 
     <!-- Favicons -->
     <link href="<?= base_url('front-end') ?>/assets/img/favicon.png" rel="icon">
@@ -30,36 +28,112 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
+    <!-- Add custom CSS for animations and styling -->
     <style>
-        .body {
-            font-family: "Plus Jakarta Sans", sans-serif;
+        /* Adjust the padding to ensure the navbar does not overlap */
+        body {
+            padding-top: 100px;
+            /* Adjust this value to the height of your fixed navbar */
         }
 
-        .card-berita {
-            overflow: hidden;
+        /* Center and style the gallery title */
+        .gallery-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: weight;
+            margin-bottom: 60px;
+            margin-top: 100px;
+            /* Added margin-top for spacing from navbar */
+            color: #333;
+            font-size: 36px;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .card-berita img {
-            transition: transform 0.2s ease;
+
+        /* Animation for gallery items */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
         }
 
-        .card-berita:hover img {
-            transform: scale(1.1);
-            /* Zoom-in gambar saat kursor berada di atas kartu */
-            filter: brightness(70%);
+        /* Keyframes for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Center and style the gallery title */
+        .gallery-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        /* Navbar styling */
+        header#header {
+            z-index: 9999;
+            /* Ensures the navbar stays above other content */
+        }
+
+        /* Navbar links styling */
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Hover effect for navbar items */
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+        /* Styling for the gallery cards */
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for cards */
+        .card:hover {
+            transform: translateY(-10px);
+            /* Card lifts slightly */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            /* Enhanced shadow */
+        }
+
+        /* Card image styling */
+        .card-img-top {
+            border-radius: 10px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        /* Styling for card body */
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .card-body .card-text {
+            color: #555;
         }
     </style>
-
-    <!-- =======================================================
-  * Template Name: Mentor - v4.9.1
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
-
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container">
@@ -143,73 +217,55 @@
         </div>
     </header>
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex justify-content-center align-items-center">
-        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-            <h2>Dinas Perikanan</h2>
-            <h1>Kota semarang</h1>
-        </div>
-    </section><!-- End Hero -->
+    <!-- ======= Gallery Section ======= -->
+    <div class="container mt-5">
+        <!-- Centered title -->
+        <h2 class="gallery-title"><?= $judul_galeri; ?></h2>
 
-    <!-- ======= News Section ======= -->
-    <section id="news" class="courses">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Berita</h2>
-                <p>Berita Terbaru</p>
-            </div>
-
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
-                <?php foreach ($berita as $item) : ?>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                        <div class="card-berita shadow-sm h-100">
-                            <img src="<?= base_url('image/iberita/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
-                            <div class="card-body my-1 d-flex flex-column">
-                                <h4 class="mx-auto mt-2"><a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a></h3>
-                                    <p class="mx-2">
-                                        <?= esc(substr(strip_tags($item['isi_berita']), 0, 150)) . '...' ?>
-                                    </p>
-                                    <div class="mt-auto text-center mb-3">
-                                        <div class="trainer-profile">
-                                            <a href="<?= base_url('berita/detail/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
-                            </div>
+        <div class="row">
+            <!-- Loop through gallery items -->
+            <?php foreach ($gallery as $item): ?>
+                <div class="col-md-4 mb-4 fade-in">
+                    <!-- Card for each gallery item -->
+                    <div class="card">
+                        <!-- Image -->
+                        <img src="<?= base_url('foto/' . $item['file_galeri']); ?>" class="card-img-top" alt="<?= $item['judul_galeri']; ?>">
+                        <div class="card-body">
+                            <!-- Card title (Judul) -->
+                            <h5 class="card-title"><?= $item['judul_galeri']; ?></h5>
+                            <!-- Card text (Tanggal) -->
+                            <p class="card-text"><?= date('d M Y', strtotime($item['tgl_galeri'])); ?></p>
                         </div>
                     </div>
-                <?php endforeach; ?>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination d-flex justify-content-center">
-                <?= $pagination_links ?>
-            </div>
-        </div>
-    </section>
-
-    <!-- End News Section -->
-
-    <!-- Profile-->
-    <main id="main">
-
-        <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
-                <div class="row">
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-1 content">
-                        <h3>Tentang Kami</h3>
-                        <p class="fst-italic">
-                            Dinas Perikanan Kota Semarang Jl. Pemuda No.175, Sekayu, Semarang Tengah,
-                            Kota Semarang, Jawa Tengah 50132 (024) 3547998
-                        </p>
-                    </div>
-                    <div class="col-lg-6 order-2" data-aos="fade-left" data-aos-delay="100">
-                        <img src=<?= base_url('logo/about.jpg') ?> class=" img-fluid" alt="">
-                    </div>
                 </div>
-            </div>
-        </section>
+            <?php endforeach; ?>
+        </div>
+    </div>
 
-    </main><!-- End #main -->
+    <!-- Pagination Section -->
+    <div class="container mt-4">
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <!-- Previous Button -->
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <!-- Page Numbers -->
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <!-- Next Button -->
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="bg-light text-dark py-4">

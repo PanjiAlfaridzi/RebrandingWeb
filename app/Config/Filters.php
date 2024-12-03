@@ -97,6 +97,8 @@ class Filters extends BaseFilters
                     'Home/*',
                     'Nelayan', 'Nelayan/*',
                     'Berita', 'Berita/*',
+                    'Gallery', 'Gallery/*',
+                    'Gallerynav', 'Gallerynav/*',
                 ],
             ]
             // 'honeypot',
