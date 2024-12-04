@@ -16,7 +16,7 @@ class Hukumnav extends BaseController
     public function index()
     {
         $data = [
-            'judul_dokumen' => 'Informasi Berkala',
+            'judul_dokumen' => 'Informasi hukum',
             'dokumen' => $this->ModelHukumnav->findAll()
         ];
         return view('ppid/v_hukumnav', $data);
