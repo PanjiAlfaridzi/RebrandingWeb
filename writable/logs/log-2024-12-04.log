@@ -1,0 +1,366 @@
+CRITICAL - 2024-12-04 08:49:29 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:50:31 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:52:51 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:53:03 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:53:48 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:56:48 --> BadMethodCallException: Call to undefined method App\Models\ModelBerita::getBeritaTerbaru
+[Method: GET, Route: DokumenTampil]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\DokumenTampil.php(26): CodeIgniter\Model->__call('getBeritaTerbaru', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:56:51 --> BadMethodCallException: Call to undefined method App\Models\ModelBerita::getBeritaTerbaru
+[Method: GET, Route: DokumenTampil]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\DokumenTampil.php(26): CodeIgniter\Model->__call('getBeritaTerbaru', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:58:34 --> ErrorException: Undefined variable $pagination_links
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 185.
+ 1 APPPATH\Views\v_template_front_end.php(185): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pagination_links', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 185)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(28): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:58:52 --> BadMethodCallException: Call to undefined method App\Models\ModelBerita::getBeritaTerbaru
+[Method: GET, Route: DokumenTampil]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\DokumenTampil.php(26): CodeIgniter\Model->__call('getBeritaTerbaru', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:59:08 --> BadMethodCallException: Call to undefined method App\Models\ModelBerita::getBeritaTerbaru
+[Method: GET, Route: DokumenTampil]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\DokumenTampil.php(26): CodeIgniter\Model->__call('getBeritaTerbaru', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:59:48 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 08:59:50 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:00:12 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:00:15 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:04:34 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:04:40 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: DokumenTampil]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\DokumenTampil.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DokumenTampil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DokumenTampil))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:08:07 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: Dokumennav]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\Dokumennav.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:08:12 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: Dokumennav]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\Dokumennav.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 02:14:20 --> Error: Class "App\Models\ModelDokumennav" not found
+[Method: GET, Route: Dokumennav]
+in APPPATH\Controllers\Dokumennav.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Dokumennav->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:17:50 --> BadMethodCallException: Call to undefined method App\Models\ModelDokumennav::AllData
+[Method: GET, Route: Dokumennav]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Dokumennav.php(22): CodeIgniter\Model->__call('AllData', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:17:57 --> BadMethodCallException: Call to undefined method App\Models\ModelDokumennav::AllData
+[Method: GET, Route: Dokumennav]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Dokumennav.php(22): CodeIgniter\Model->__call('AllData', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:18:35 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: Dokumennav]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\Dokumennav.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:19:36 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: Dokumennav]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\Dokumennav.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 09:23:12 --> ErrorException: Undefined variable $berita
+[Method: GET, Route: Dokumennav]
+in APPPATH\Views\v_template_front_end.php on line 163.
+ 1 APPPATH\Views\v_template_front_end.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $berita', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_template_front_end.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_template_front_end', [], true)
+ 5 APPPATH\Controllers\Dokumennav.php(24): view('v_template_front_end', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-04 02:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 02:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 02:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 02:40:42 --> ErrorException: unlink(C:\xampp\htdocs\rebrandingweb\writable\debugbar/debugbar_1733279706.230572.json): No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\rebrandingweb\\writable\\debugbar/debugbar_1733279706.230572.json): No such file or directory', 'C:\\xampp\\htdocs\\rebrandingweb\\system\\Debug\\Toolbar\\Collectors\\History.php', 82)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(82): unlink('C:\\xampp\\htdocs\\rebrandingweb\\writable\\debugbar/debugbar_1733279706.230572.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(518): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1733280042.222738', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-04 09:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-04 09:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-04 02:45:44 --> ErrorException: Undefined variable $judul
+[Method: GET, Route: Dokumennav]
+in APPPATH\Views\v_dokumennav.php on line 224.
+ 1 APPPATH\Views\v_dokumennav.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_dokumennav.php', 224)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_dokumennav.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_dokumennav', [], true)
+ 5 APPPATH\Controllers\Dokumennav.php(21): view('v_dokumennav', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-04 02:47:43 --> ErrorException: Undefined variable $judul
+[Method: GET, Route: Dokumennav]
+in APPPATH\Views\v_dokumennav.php on line 224.
+ 1 APPPATH\Views\v_dokumennav.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_dokumennav.php', 224)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\rebrandingweb\\app\\Views\\v_dokumennav.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('v_dokumennav', [], true)
+ 5 APPPATH\Controllers\Dokumennav.php(21): view('v_dokumennav', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dokumennav->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dokumennav))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
