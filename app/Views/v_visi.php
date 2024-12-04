@@ -449,32 +449,65 @@
 
 
 
-    <footer id="footer">
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="bg-light text-dark py-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <!-- Left Section: About, Quick Links, Contact, and Social Media -->
+            <div class="d-flex flex-wrap align-items-start">
+                <!-- About Section -->
+                <div class="footer-about me-4">
+                    <h5><i class="bx bx-info-circle"></i> About Us</h5>
+                    <p>Terwujudnya Sumberdaya Perikanan dan Masyarakat yang</p>
+                    <p>Mampu Menampung Aktivitas Perekonomian</p>
+                    <p>Kota Semarang.</p>
 
-
-        <div class="container d-md-flex py-4">
-
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
                 </div>
-                <div class="credits">
-                    <!-- All the links in the footer should remain intact. -->
-                    <!-- You can delete the links only if you purchased the pro version. -->
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                <!-- Quick Links Section -->
+                <div class="footer-links me-4">
+                    <h5><i class="bx bx-link"></i> Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bx bx-home"></i> Home</a></li>
+                        <li><a href="#"><i class="bx bx-cog"></i> Servis</a></li>
+                        <li><a href="#"><i class="bx bx-news"></i> Berita</a></li>
+                        <li><a href="#"><i class="bx bx-phone"></i> Kontak</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Section -->
+                <div class="footer-contact me-4">
+                    <h5><i class="bx bx-envelope"></i> Contact</h5>
+                    <p>
+                        <i class="bx bx-map"></i> Jl. Pemuda No.175, Sekayu, Semarang Tengah<br>
+                        <i class="bx bx-mail-send"></i> Email: perikanan@semarangkota.go.id<br>
+                        <i class="bx bx-phone"></i> Phone: (024) 3547998
+                    </p>
+                </div>
+                <!-- Social Media Section -->
+                <div class="footer-social">
+                    <h5><i class="bx bxl-share-alt"></i> Ikuti Kami</h5>
+                    <div class="d-flex">
+                        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fperikanansmg" class="twitter me-2">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/DinasPerikananKotaSemarang/" class="facebook me-2">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dinasperikanankotasemarang" class="instagram">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <!-- Right Section: Logo -->
+            <div class="footer-logo">
+                <img src="<?= base_url('logo/Lambang_Kota_Semarang.png') ?>"
+                    style="width: 100px; height: auto;"
+                    alt="Logo Kota Semarang">
             </div>
         </div>
-
+        <!-- Bottom Section -->
+        <div class="text-center mt-3">
+            <p>&copy; <?= date('Y') ?> Kominfo Semarang. All Rights Reserved.</p>
+        </div>
     </footer><!-- End Footer -->
 
     <div id="preloader"></div>
