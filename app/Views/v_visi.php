@@ -371,7 +371,6 @@
                                 <li><a href="<?= base_url('/index.php/Soprenja') ?>">Sop Renja</a></li>
                             </ul>
                         </li>
-
                         <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                                 <li><a href="<?= base_url('/index.php/Hukumnav') ?>">Dasar Hukum</a></li>
