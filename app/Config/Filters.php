@@ -99,6 +99,9 @@ class Filters extends BaseFilters
                     'Berita', 'Berita/*',
                     'Gallery', 'Gallery/*',
                     'Gallerynav', 'Gallerynav/*',
+                    'Artikel', 'Artikel/*',
+                    'Beritanav', 'Beritanav/*',
+                    'Contact', 'Contact/*',
                 ],
             ]
             // 'honeypot',

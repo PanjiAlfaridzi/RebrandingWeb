@@ -3,7 +3,7 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
         <div class="container">
-            <h2><?= $berita['judul_berita'] ?></h2>
+            <h2><?= $berita['judul'] ?></h2>
         </div>
     </div>
 

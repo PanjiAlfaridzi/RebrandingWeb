@@ -16,7 +16,7 @@ class Galeri extends BaseController
     {
         $data = [
             'judul' => 'galeri',
-            'page' => 'galeri/v_galeri',
+            'page' => 'admin/galeri/v_galeri',
             'galeri' => $this->ModelGaleri->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Galeri extends BaseController
     {
         $data = [
             'judul' => 'Input galeri',
-            'page' => 'galeri/v_input_galeri',
+            'page' => 'admin/galeri/v_input_galeri',
             'galeri' => $this->ModelGaleri->AllData(),
         ];
         return view('v_template_back_end', $data);

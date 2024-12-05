@@ -183,71 +183,123 @@
                                 </ul>
                             </div>
                         </li>
-
                         <li class="nav-item">
-                            <a data-toggle="collapse" href="#setting">
-                                <i class="fas fa-cog"></i>
-                                <p>Setting</p>
+                            <a data-toggle="collapse" href="#dokumen">
+                                <i class="fas fa-layer-group"></i>
+                                <p>Dokumen</p>
                                 <span class="caret"></span>
                             </a>
-                            <div class="collapse" id=setting>
+                            <div class="collapse" id="dokumen">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="components/buttons.html">
-                                            <span class="sub-item">visi misi</span>
+                                        <a href="<?= base_url('/index.php/Dokumen') ?>">
+                                            <span class="sub-item">Dokumen Perencanaan</span>
                                         </a>
                                     </li>
                                     <li>
-                                </ul>
-                            </div>
-
-                        <li class="nav-item">
-                            <a href="<?= base_url('/index.php/Nelayan') ?>">
-                                <i class="fas fa-users"></i>
-                                <p>Nelayan</p>
-                                <span class="badge badge-count">5</span>
-                            </a>
+                                        <a href="<?= base_url('/index.php/Layanan') ?>">
+                                            <span class="sub-item">Dokumen Layanan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= base_url('/index.php/Berkala') ?>">
+                                            <span class="sub-item">Dokumen Berkala</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= base_url('/index.php/Hukum') ?>">
+                                            <span class="sub-item">Dokumen Hukum</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= base_url('/index.php/Merta') ?>">
+                                            <span class="sub-item">Dokumen Merta</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= base_url('/index.php/Profil') ?>">
+                                            <span class="sub-item">Dokumen Profil</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= base_url('/index.php/Saat') ?>">
+                                            <span class="sub-item">Dokumen Saat</span>
+                                        </a>
+                                    </li>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('/index.php/Berita') ?>">
-                                <i class="fas fa-newspaper"></i>
-                                <p>Berita</p>
-                                <span class="badge badge-count">5</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('/index.php/Dokumen') ?>">
-                                <i class="fas fa-newspaper"></i>
-                                <p>Dokumen</p>
-                                <span class="badge badge-count">5</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('/index.php/Galeri') ?>">
-                                <i class="fas fa-newspaper"></i>
-                                <p>Galeri</p>
-                                <span class="badge badge-count">5</span>
-                            </a>
-                        </li>
-
-
-                        </li>
-
+                        <li>
                     </ul>
                 </div>
+
+
+                </li>
+
+                <li class="nav-item">
+                    <a data-toggle="collapse" href="#setting">
+                        <i class="fas fa-cog"></i>
+                        <p>Setting</p>
+                        <span class="caret"></span>
+                    </a>
+
+                    <div class="collapse" id=setting>
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="components/buttons.html">
+                                    <span class="sub-item">visi misi</span>
+                                </a>
+                            </li>
+                            <li>
+                        </ul>
+                    </div>
+
+
+                <li class="nav-item">
+                    <a href="<?= base_url('/index.php/Nelayan') ?>">
+                        <i class="fas fa-users"></i>
+                        <p>Nelayan</p>
+                        <span class="badge badge-count">5</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('/index.php/Berita') ?>">
+                        <i class="fas fa-newspaper"></i>
+                        <p>Berita</p>
+                        <span class="badge badge-count">5</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('/index.php/Dokumen') ?>">
+                        <i class="fas fa-newspaper"></i>
+                        <p>Dokumen</p>
+                        <span class="badge badge-count">5</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('/index.php/Galeri') ?>">
+                        <i class="fas fa-newspaper"></i>
+                        <p>Galeri</p>
+                        <span class="badge badge-count">5</span>
+                    </a>
+                </li>
+
+
+                </li>
+
+                </ul>
             </div>
         </div>
-        <!-- End Sidebar -->
-        <div class="main-panel">
-            <div class="content">
-                <div class="page-inner">
-                    <h4 class="page-title"><?= $judul ?></h4>
-                    <?php if ($page) {
-                        echo view($page);
-                    } ?>
-                </div>
+    </div>
+    <!-- End Sidebar -->
+    <div class="main-panel">
+        <div class="content">
+            <div class="page-inner">
+                <h4 class="page-title"><?= $judul ?></h4>
+                <?php if ($page) {
+                    echo view($page);
+                } ?>
             </div>
         </div>
+    </div>
 
     </div>
 

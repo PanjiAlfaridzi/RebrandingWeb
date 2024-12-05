@@ -8,41 +8,43 @@ class ModelBerita extends Model
 {
     protected $table = 'tbl_berita';
     protected $primaryKey = 'id_berita';
-    protected $allowedFields = ['judul_berita', 'isi_berita', 'gambar_berita'];
+    protected $allowedFields = ['judul_berita', 'isi_berita', 'gambar_berita', 'type_berita']; // Tambahkan type_berita
 
     public function AllData()
     {
-        return $this->db->table('tbl_berita')
-            ->get()->getResultArray();
+        return $this->findAll();
     }
 
     public function InsertData($data)
     {
-        $this->db->table('tbl_berita')->insert($data);
+        $this->insert($data);
     }
 
     public function UpdateData($data)
     {
-        $this->db->table('tbl_berita')
-            ->where('id_berita', $data['id_berita'])
-            ->update($data);
+        $this->update($data['id_berita'], $data);
     }
 
     public function DeleteData($data)
     {
-        $this->db->table('tbl_berita')
-            ->where('id_berita', $data['id_berita'])
-            ->delete($data);
+        $this->delete($data['id_berita']);
     }
 
     public function DetailBerita($id_berita)
     {
-        return $this->db->table('tbl_berita')
-            ->where('id_berita', $id_berita)
-            ->get()->getRowArray();
+        return $this->find($id_berita);
     }
 
-
+    public function getPaginatedData($perPage, $page)
+    {
+        return $this->paginate($perPage, 'default', $page);
+    }
 
     // Method baru untuk mengambil berita terbaru
+    public function getRecentNews($limit = 5)
+    {
+        return $this->orderBy('tgl_berita', 'DESC')
+            ->limit($limit)
+            ->findAll();
+    }
 }

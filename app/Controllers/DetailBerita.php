@@ -46,6 +46,7 @@ class DetailBerita extends BaseController
         $data['berita']['isi_berita'] = $this->formatBeritaContent($data['berita']['isi_berita']);
 
         $data['judul'] = 'Berita terkini';
-        return view('berita/v_detail', $data);
+        $data['type_berita'] = 'Artikel terkini';
+        return view('admin/berita/v_detail', $data);
     }
 }

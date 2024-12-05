@@ -32,20 +32,18 @@
     <style>
         /* Adjust the padding to ensure the navbar does not overlap */
         body {
-            padding-top: 100px;
+            padding-top: 120px;
             /* Adjust this value to the height of your fixed navbar */
         }
 
         /* Center and style the gallery title */
         .gallery-title {
+            font-size: 36px;
+            font-weight: 700;
             text-align: center;
-            font-size: 36px;
-            font-weight: weight;
+            text-transform: uppercase;
             margin-bottom: 60px;
-            margin-top: 100px;
-            /* Added margin-top for spacing from navbar */
-            color: #333;
-            font-size: 36px;
+            color: #343a40;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -170,8 +168,7 @@
                                 <li><a href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
                                 <li><a href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
                                 <li><a href="#">Kepala Dinas</a></li>
-                                <li><a href="#">Tupoksi</a></li>
-                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tugas dan Fungsi</a></li>
+                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tupoksi</a></li>
                                 <li><a href="#">Bidang & UPTD</a></li>
                             </ul>
                         </li>
@@ -185,111 +182,107 @@
 
                         <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="#">Berita</a></li>
-                                <li><a href="#">Artikel</a></li>
-                                <li><a href="#">Agenda (Rencana Kegiatan)</a></li>
-                                <li><a href="#">Sop Renja</a></li>
+                                <li><a href="<?= base_url('/index.php/Beritanav') ?>">Berita</a></li>
+                                <li><a href="<?= base_url('/index.php/Artikel') ?>">Artikel</a></li>
+                                <li><a href="<?= base_url('/index.php/Agenda') ?>">Agenda (Rencana Kegiatan)</a></li>
+                                <li><a href="<?= base_url('/index.php/Soprenja') ?>">Sop Renja</a></li>
                             </ul>
                         </li>
 
                         <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="#">Dasar Hukum</a></li>
-                                <li><a href="#">Layanan Informasi</a></li>
-                                <li><a href="#">Informasi Berkala</a></li>
-                                <li><a href="#">Informasi Serta Merta</a></li>
-                                <li><a href="#">Informasi Setiap Saat</a></li>
-                                <li><a href="#">Informasi Dikecualikan</a></li>
-                                <li><a href="#">Profil PPID</a></li>
+                        <ul>
+                                <li><a href="<?= base_url('/index.php/Hukumnav') ?>">Dasar Hukum</a></li>
+                                <li><a href="<?= base_url('/index.php/Layanannav') ?>">Layanan Informasi</a></li>
+                                <li><a href="<?= base_url('/index.php/Berkalanav') ?>">Informasi Berkala</a></li>
+                                <li><a href="<?= base_url('/index.php/Mertanav') ?>">Informasi Serta Merta</a></li>
+                                <li><a href="<?= base_url('/index.php/Saatnav') ?>">Informasi Setiap Saat</a></li>
+                                <li><a href="<?= base_url('/index.php/Kecualinav') ?>">Informasi Dikecualikan</a></li>
+                                <li><a href="<?= base_url('/index.php/Profilnav') ?>">Profil PPID</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="/Dokumen">Dokumen Perencanaan</a></li>
+                        <li><a href="<?= base_url('/index.php/nav/Dokumennav') ?>">Dokumen Perencanaan</a></li>
                         <li><a href="#">Peraturan Perundangan</a></li>
 
-                        <li><a href="<?= base_url('/index.php/Gallerynav') ?>"><span>Galeri</span></a>
+                        <li><a href="<?= base_url('/index.php/nav/Gallerynav') ?>"><span>Galeri</span></a>
                         </li>
 
-                        <li><a href="contact.html">Kontak</a></li>
+                        <li><a href="<?= base_url('/index.php/Contact') ?>">Kontak</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- ======= Gallery Section ======= -->
-    <div class="col-sm-12">
-        <div class="card">
-            <main id="main" data-aos="fade-up">
-                <!-- ======= Breadcrumbs ======= -->
-                <div class="breadcrumbs">
-                    <div class="container">
-                        <h2><?= $judul_dokumen ?></h2>
-                        <p>isi dokumen</p>
-                    </div>
-                </div>
-
-                <table id="basic-datatables" class="table table-striped table-hover table-bordered-bd-primary table-head-bg-primary mt-3">
-                    <thead>
-                        <tr class="text-center">
-                            <th width="50px">#</th>
-                            <th scope="col">Judul Dokumen</th>
-                            <th scope="col">Gambar</th>
-                            <th scope="col">Tanggal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $no = 1;
-                        foreach ($dokumen as $key => $p) { ?>
-                            <tr>
-                                <td><?= $no++ ?></td>
-                                <td class="text-center"><?= $p['judul_dokumen'] ?></td>
-                                <td class="text-center">
-                                    <embed
-                                        src="<?= base_url('/image/fdokumen/' . $p['file_dokumen']) ?>"
-                                        type="application/pdf"
-                                        width="250px"
-                                        height="200px">
-                                    <!-- Tambahkan tombol download -->
-                                    <br>
-                                    <a href="<?= base_url('/image/fdokumen/' . $p['file_dokumen']) ?>"
-                                        class="btn btn-sm btn-primary mt-2"
-                                        download>
-                                        <i class="fa fa-download"></i> Download PDF
-                                    </a>
-                                </td>
-                                <td><?= $p['tgl_dokumen'] ?> <?= $p['jam_dokumen'] ?></td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-        </div>
-    </div>
+  <!-- Section Letak Dokumen -->
+<div class="container my-5">
+    <!-- Judul Dokumen -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold"><?= $judul_dokumen ?></h2>
+        <p class="text-secondary">Daftar dokumen yang tersedia untuk diunduh.</p>
     </div>
 
-    <!-- Pagination Section -->
-    <div class="container mt-4">
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                <!-- Previous Button -->
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <!-- Page Numbers -->
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <!-- Next Button -->
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <!-- Tabel Dokumen -->
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead class="bg-primary text-white text-center">
+                <tr>
+                    <th width="50px">No</th>
+                    <th>Judul Dokumen</th>
+                    <th>Preview</th>
+                    <th>Tanggal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $no = 1; foreach ($dokumen as $key => $p) { ?>
+                    <tr>
+                        <td class="text-center"><?= $no++ ?></td>
+                        <td><?= $p['judul_dokumen'] ?></td>
+                        <td class="text-center">
+                            <embed 
+                                src="<?= base_url('/image/fdokumen/' . $p['file_dokumen']) ?>" 
+                                type="application/pdf" 
+                                width="150" 
+                                height="100">
+                        </td>
+                        <td class="text-center"><?= $p['tgl_dokumen'] ?> </td>
+                        <td class="text-center">
+                            <a href="<?= base_url('/image/fdokumen/' . $p['file_dokumen']) ?>" 
+                                class="btn btn-sm btn-primary" 
+                                download>
+                                <i class="bi bi-download"></i> Download
+                            </a>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
+
+    <!-- Pagination -->
+    <nav class="mt-4">
+        <ul class="pagination justify-content-center">
+            <!-- Previous Button -->
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <!-- Page Numbers -->
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <!-- Next Button -->
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
 
 
     <!-- ======= Footer ======= -->
@@ -352,7 +345,7 @@
             <p>&copy; <?= date('Y') ?> Kominfo Semarang. All Rights Reserved.</p>
         </div>
     </footer><!-- End Footer -->
-    
+
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

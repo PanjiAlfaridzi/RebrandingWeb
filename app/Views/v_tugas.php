@@ -27,17 +27,21 @@
         #tugas-fungsi {
             background-color: #ffffff;
             padding: 100px 15px;
-            padding-top: 120px;
+            padding-top: 100px;
+
         }
 
         .tugas-fungsi h2 {
-            font-size: 36px;
-            font-weight: 700;
             text-align: center;
-            text-transform: uppercase;
+            font-size: 36px;
+            font-weight: bold;
             margin-bottom: 60px;
-            color: #343a40;
+            margin-top: 100px;
+            /* Added margin-top for spacing from navbar */
+            color: #333;
+            font-size: 36px;
             font-family: 'Poppins', sans-serif;
+
         }
 
         .row-cols-1 {
@@ -328,8 +332,7 @@
                                 <li><a href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
                                 <li><a href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
                                 <li><a href="#">Kepala Dinas</a></li>
-                                <li><a href="#">Tupoksi</a></li>
-                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tugas dan Fungsi</a></li>
+                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tupoksi</a></li>
                                 <li><a href="#">Bidang & UPTD</a></li>
                             </ul>
                         </li>
@@ -343,32 +346,32 @@
 
                         <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="#">Berita</a></li>
-                                <li><a href="#">Artikel</a></li>
-                                <li><a href="#">Agenda (Rencana Kegiatan)</a></li>
-                                <li><a href="#">Sop Renja</a></li>
+                                <li><a href="<?= base_url('/index.php/Beritanav') ?>">Berita</a></li>
+                                <li><a href="<?= base_url('/index.php/Artikel') ?>">Artikel</a></li>
+                                <li><a href="<?= base_url('/index.php/Agenda') ?>">Agenda (Rencana Kegiatan)</a></li>
+                                <li><a href="<?= base_url('/index.php/Soprenja') ?>">Sop Renja</a></li>
                             </ul>
                         </li>
 
                         <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="#">Dasar Hukum</a></li>
-                                <li><a href="#">Layanan Informasi</a></li>
-                                <li><a href="#">Informasi Berkala</a></li>
-                                <li><a href="#">Informasi Serta Merta</a></li>
-                                <li><a href="#">Informasi Setiap Saat</a></li>
-                                <li><a href="#">Informasi Dikecualikan</a></li>
-                                <li><a href="#">Profil PPID</a></li>
+                        <ul>
+                                <li><a href="<?= base_url('/index.php/Hukumnav') ?>">Dasar Hukum</a></li>
+                                <li><a href="<?= base_url('/index.php/Layanannav') ?>">Layanan Informasi</a></li>
+                                <li><a href="<?= base_url('/index.php/Berkalanav') ?>">Informasi Berkala</a></li>
+                                <li><a href="<?= base_url('/index.php/Mertanav') ?>">Informasi Serta Merta</a></li>
+                                <li><a href="<?= base_url('/index.php/Saatnav') ?>">Informasi Setiap Saat</a></li>
+                                <li><a href="<?= base_url('/index.php/Kecualinav') ?>">Informasi Dikecualikan</a></li>
+                                <li><a href="<?= base_url('/index.php/Profilnav') ?>">Profil PPID</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="/Dokumen">Dokumen Perencanaan</a></li>
+                        <li><a href="<?= base_url('/index.php/nav/Dokumennav') ?>">Dokumen Perencanaan</a></li>
                         <li><a href="#">Peraturan Perundangan</a></li>
 
-                        <li><a href="<?= base_url('/index.php/Gallerynav') ?>"><span>Galeri</span></a>
+                        <li><a href="<?= base_url('/index.php/nav/Gallerynav') ?>"><span>Galeri</span></a>
                         </li>
 
-                        <li><a href="contact.html">Kontak</a></li>
+                        <li><a href="<?= base_url('/index.php/Contact') ?>">Kontak</a></li>
                     </ul>
                 </div>
             </nav>

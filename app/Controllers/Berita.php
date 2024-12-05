@@ -12,11 +12,12 @@ class Berita extends BaseController
         $this->ModelBerita = new ModelBerita();
         date_default_timezone_set('Asia/Jakarta');
     }
+
     public function index(): string
     {
         $data = [
             'judul' => 'Berita',
-            'page' => 'berita/v_berita',
+            'page' => 'admin/berita/v_berita',
             'berita' => $this->ModelBerita->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +27,7 @@ class Berita extends BaseController
     {
         $data = [
             'judul' => 'Input Berita',
-            'page' => 'berita/v_input',
+            'page' => 'admin/berita/v_input',
             'berita' => $this->ModelBerita->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -53,6 +54,7 @@ class Berita extends BaseController
                 'gambar_berita' => $fileName, // Simpan nama file ke database
                 'tgl_berita' => date('Y-m-d'), // Tanggal sekarang
                 'jam_berita' => date('H:i:s'), // Jam sekarang
+                'type_berita' => $this->request->getPost('type_berita'), // Tambahkan type_berita
             ];
 
             // Simpan data ke database
@@ -64,7 +66,6 @@ class Berita extends BaseController
 
         return redirect()->to('Berita');
     }
-
 
     public function UpdateData($id_berita)
     {
@@ -78,6 +79,7 @@ class Berita extends BaseController
             'isi_berita' => strip_tags($this->request->getPost('isi_berita')),
             'tgl_berita' => date('Y-m-d'), // Tanggal sekarang
             'jam_berita' => date('H:i:s'), // Jam sekarang
+            'type_berita' => $this->request->getPost('type_berita'), // Tambahkan type_berita
         ];
 
         // Jika ada file gambar yang diupload

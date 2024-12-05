@@ -48,6 +48,33 @@
             /* Zoom-in gambar saat kursor berada di atas kartu */
             filter: brightness(70%);
         }
+
+        .pagination a, .pagination-links-container a, .pagination-links-container span {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* pastikan semua elemen memiliki tinggi yang sama */
+}
+
+.pagination-links-container {
+    display: flex;
+    align-items: center;
+}
+
+.pagination a:hover, .pagination-links-container a:hover, .pagination-links-container span:hover {
+    background-color: #0056b3;
+}
+
+
+
+
     </style>
 
     <!-- =======================================================
@@ -96,8 +123,7 @@
                                 <li><a href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
                                 <li><a href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
                                 <li><a href="#">Kepala Dinas</a></li>
-                                <li><a href="#">Tupoksi</a></li>
-                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tugas dan Fungsi</a></li>
+                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tupoksi</a></li>
                                 <li><a href="#">Bidang & UPTD</a></li>
                             </ul>
                         </li>
@@ -111,32 +137,32 @@
 
                         <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="#">Berita</a></li>
-                                <li><a href="#">Artikel</a></li>
-                                <li><a href="#">Agenda (Rencana Kegiatan)</a></li>
-                                <li><a href="#">Sop Renja</a></li>
+                                <li><a href="<?= base_url('/index.php/Beritanav') ?>">Berita</a></li>
+                                <li><a href="<?= base_url('/index.php/Artikel') ?>">Artikel</a></li>
+                                <li><a href="<?= base_url('/index.php/Agenda') ?>">Agenda (Rencana Kegiatan)</a></li>
+                                <li><a href="<?= base_url('/index.php/Soprenja') ?>">Sop Renja</a></li>
                             </ul>
                         </li>
 
                         <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="#">Dasar Hukum</a></li>
-                                <li><a href="#">Layanan Informasi</a></li>
-                                <li><a href="#">Informasi Berkala</a></li>
-                                <li><a href="#">Informasi Serta Merta</a></li>
-                                <li><a href="#">Informasi Setiap Saat</a></li>
-                                <li><a href="#">Informasi Dikecualikan</a></li>
-                                <li><a href="#">Profil PPID</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Hukumnav') ?>">Dasar Hukum</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Layanannav') ?>">Layanan Informasi</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Berkalanav') ?>">Informasi Berkala</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Mertanav') ?>">Informasi Serta Merta</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Saatnav') ?>">Informasi Setiap Saat</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Kecualinav') ?>">Informasi Dikecualikan</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Profilnav') ?>">Profil PPID</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="<?= base_url('/index.php/Dokumennav') ?>">Dokumen Perencanaan</a></li>
+                        <li><a href="<?= base_url('/index.php/nav/Dokumennav') ?>">Dokumen Perencanaan</a></li>
                         <li><a href="#">Peraturan Perundangan</a></li>
 
-                        <li><a href="<?= base_url('/index.php/Gallerynav') ?>"><span>Galeri</span></a>
+                        <li><a href="<?= base_url('/index.php/nav/Gallerynav') ?>"><span>Galeri</span></a>
                         </li>
 
-                        <li><a href="contact.html">Kontak</a></li>
+                        <li><a href="<?= base_url('/index.php/Contact') ?>">Kontak</a></li>
                     </ul>
                 </div>
             </nav>
@@ -153,39 +179,51 @@
 
     <!-- ======= News Section ======= -->
     <section id="news" class="courses">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Berita</h2>
-                <p>Berita Terbaru</p>
-            </div>
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Berita</h2>
+            <p>Berita Terbaru</p>
+        </div>
 
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
-                <?php foreach ($berita as $item) : ?>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
-                        <div class="card-berita shadow-sm h-100">
-                            <img src="<?= base_url('image/iberita/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
-                            <div class="card-body my-1 d-flex flex-column">
-                                <h4 class="mx-auto mt-2"><a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a></h3>
-                                    <p class="mx-2">
-                                        <?= esc(substr(strip_tags($item['isi_berita']), 0, 150)) . '...' ?>
-                                    </p>
-                                    <div class="mt-auto text-center mb-3">
-                                        <div class="trainer-profile">
-                                            <a href="<?= base_url('berita/detail/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
-                                        </div>
-                                    </div>
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <?php foreach ($berita as $item) : ?>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+                    <div class="card-berita shadow-sm h-100">
+                        <img src="<?= base_url('image/iberita/' . $item['gambar_berita']) ?>" class="card-img-top" alt="...">
+                        <div class="card-body my-1 d-flex flex-column">
+                            <h4 class="mx-auto mt-2">
+                                <a href="<?= base_url('berita/' . esc($item['id_berita'])) ?>"><?= esc($item['judul_berita']) ?></a>
+                            </h4>
+                            <p class="mx-2">
+                                <?= esc(substr(strip_tags($item['isi_berita']), 0, 150)) . '...' ?>
+                            </p>
+                            <div class="mt-auto text-center mb-3">
+                                <div class="trainer-profile">
+                                    <a href="<?= base_url('berita/detail/' . esc($item['id_berita'])) ?>" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination d-flex justify-content-center">
+            <?php if ($pager->getPreviousPageURI() !== null) : ?>
+                <a href="<?= $pager->getPreviousPageURI() ?>" class="btn btn-primary mx-1">Previous</a>
+            <?php endif; ?>
+
+            <div class="pagination-links-container d-flex align-items-center">
+                <?= $pager->links() ?>
             </div>
 
-            <!-- Pagination -->
-            <div class="pagination d-flex justify-content-center">
-                <?= $pagination_links ?>
-            </div>
+            <?php if ($pager->getNextPageURI() !== null) : ?>
+                <a href="<?= $pager->getNextPageURI() ?>" class="btn btn-primary mx-1">Next</a>
+            <?php endif; ?>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- End News Section -->
 
