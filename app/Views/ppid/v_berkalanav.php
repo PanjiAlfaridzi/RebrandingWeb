@@ -185,17 +185,10 @@
 
                         <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-<<<<<<< HEAD
                                 <li><a href="<?= base_url('/index.php/Beritanav') ?>">Berita</a></li>
                                 <li><a href="<?= base_url('/index.php/Artikel') ?>">Artikel</a></li>
                                 <li><a href="<?= base_url('/index.php/Agenda') ?>">Agenda (Rencana Kegiatan)</a></li>
                                 <li><a href="<?= base_url('/index.php/Soprenja') ?>">Sop Renja</a></li>
-=======
-                                <li><a href="#">Berita</a></li>
-                                <li><a href="#">Artikel</a></li>
-                                <li><a href="#">Agenda (Rencana Kegiatan)</a></li>
-                                <li><a href="#">Sop Renja</a></li>
->>>>>>> 3f4d20d853211c0d3312bcc0a7dbb2a5f4707da0
                             </ul>
                         </li>
 
@@ -211,7 +204,6 @@
                             </ul>
                         </li>
 
-<<<<<<< HEAD
                         <li><a href="<?= base_url('/index.php/nav/Dokumennav') ?>">Dokumen Perencanaan</a></li>
                         <li><a href="#">Peraturan Perundangan</a></li>
 
@@ -219,15 +211,6 @@
                         </li>
 
                         <li><a href="<?= base_url('/index.php/Contact') ?>">Kontak</a></li>
-=======
-                        <li><a href="/Dokumen">Dokumen Perencanaan</a></li>
-                        <li><a href="#">Peraturan Perundangan</a></li>
-
-                        <li><a href="<?= base_url('/index.php/Gallerynav') ?>"><span>Galeri</span></a>
-                        </li>
-
-                        <li><a href="contact.html">Kontak</a></li>
->>>>>>> 3f4d20d853211c0d3312bcc0a7dbb2a5f4707da0
                     </ul>
                 </div>
             </nav>
