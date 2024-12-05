@@ -16,7 +16,7 @@ class Dokumen extends BaseController
     {
         $data = [
             'judul' => 'Dokumen',
-            'page' => 'dokumen/v_dokumen',
+            'page' => 'admin/admindokumen/dokumen/v_dokumen',
             'dokumen' => $this->ModelDokumen->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Dokumen extends BaseController
     {
         $data = [
             'judul' => 'Input dokumen',
-            'page' => 'dokumen/v_input_dokumen',
+            'page' => 'admin/dokumen/v_input_dokumen',
             'dokumen' => $this->ModelDokumen->AllData(),
         ];
         return view('v_template_back_end', $data);

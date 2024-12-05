@@ -16,7 +16,7 @@ class Berita extends BaseController
     {
         $data = [
             'judul' => 'Berita',
-            'page' => 'berita/v_berita',
+            'page' => 'admin/berita/v_berita',
             'berita' => $this->ModelBerita->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Berita extends BaseController
     {
         $data = [
             'judul' => 'Input Berita',
-            'page' => 'berita/v_input',
+            'page' => 'admin/berita/v_input',
             'berita' => $this->ModelBerita->AllData(),
         ];
         return view('v_template_back_end', $data);

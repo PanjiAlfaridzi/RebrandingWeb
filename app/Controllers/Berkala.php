@@ -16,7 +16,7 @@ class Berkala extends BaseController
     {
         $data = [
             'judul' => 'Dokumen berkala',
-            'page' => 'berkala/v_dokumen',
+            'page' => 'admin/admindokumen/berkala/v_dokumen',
             'dokumen' => $this->ModelBerkala->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Berkala extends BaseController
     {
         $data = [
             'judul' => 'Input dokumen berkala',
-            'page' => 'berkala/v_input_dokumen',
+            'page' => 'admin/berkala/v_input_dokumen',
             'dokumen' => $this->ModelBerkala->AllData(),
         ];
         return view('v_template_back_end', $data);

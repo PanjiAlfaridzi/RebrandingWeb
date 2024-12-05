@@ -133,7 +133,7 @@
                         <li><a href="<?= base_url('/index.php/nav/Dokumennav') ?>">Dokumen Perencanaan</a></li>
                         <li><a href="#">Peraturan Perundangan</a></li>
 
-                        <li><a href="<?= base_url('/index.php/Gallerynav') ?>"><span>Galeri</span></a>
+                        <li><a href="<?= base_url('/index.php/nav/Gallerynav') ?>"><span>Galeri</span></a>
                         </li>
 
                         <li><a href="contact.html">Kontak</a></li>

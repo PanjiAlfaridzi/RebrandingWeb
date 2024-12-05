@@ -16,7 +16,7 @@ class Saat extends BaseController
     {
         $data = [
             'judul' => 'Dokumen saat',
-            'page' => 'saat/v_dokumen',
+            'page' => 'admin/admindokumen/saat/v_dokumen',
             'dokumen' => $this->ModelSaat->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Saat extends BaseController
     {
         $data = [
             'judul' => 'Input dokumen saat',
-            'page' => 'saat/v_input_dokumen',
+            'page' => 'admin/saat/v_input_dokumen',
             'dokumen' => $this->ModelSaat->AllData(),
         ];
         return view('v_template_back_end', $data);

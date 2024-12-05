@@ -16,7 +16,7 @@ class Merta extends BaseController
     {
         $data = [
             'judul' => 'Dokumen merta',
-            'page' => 'merta/v_dokumen',
+            'page' => 'admin/admindokumen/admindokumen/merta/v_dokumen',
             'dokumen' => $this->ModelMerta->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Merta extends BaseController
     {
         $data = [
             'judul' => 'Input dokumen',
-            'page' => 'merta/v_input_dokumen',
+            'page' => 'admin/admindokumen/admindokumen/merta/v_input_dokumen',
             'dokumen' => $this->ModelMerta->AllData(),
         ];
         return view('v_template_back_end', $data);

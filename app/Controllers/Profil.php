@@ -16,7 +16,7 @@ class Profil extends BaseController
     {
         $data = [
             'judul' => ' Dokumen Profil',
-            'page' => 'profil/v_dokumen',
+            'page' => 'admin/admindokumen/profil/v_dokumen',
             'dokumen' => $this->ModelProfil->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Profil extends BaseController
     {
         $data = [
             'judul' => 'Input dokumen Profil',
-            'page' => 'profil/v_input_dokumen',
+            'page' => 'admin/admindokumen/profil/v_input_dokumen',
             'dokumen' => $this->ModelProfil->AllData(),
         ];
         return view('v_template_back_end', $data);

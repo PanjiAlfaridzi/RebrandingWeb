@@ -16,7 +16,7 @@ class Hukum extends BaseController
     {
         $data = [
             'judul' => 'hukum',
-            'page' => 'hukum/v_dokumen',
+            'page' => 'admin/admindokumen/hukum/v_dokumen',
             'dokumen' => $this->ModelHukum->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Hukum extends BaseController
     {
         $data = [
             'judul' => 'Input dokumen hukum',
-            'page' => 'hukum/v_input_dokumen',
+            'page' => 'admin/admindokumen/hukum/v_input_dokumen',
             'dokumen' => $this->ModelHukum->AllData(),
         ];
         return view('v_template_back_end', $data);

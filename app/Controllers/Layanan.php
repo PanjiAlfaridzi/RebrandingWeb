@@ -16,7 +16,7 @@ class Layanan extends BaseController
     {
         $data = [
             'judul' => 'Layanan',
-            'page' => 'layanan/v_dokumen',
+            'page' => 'admin/admindokumen/layanan/v_dokumen',
             'layanan' => $this->ModelLayanan->AllData(),
         ];
         return view('v_template_back_end', $data);
@@ -26,7 +26,7 @@ class Layanan extends BaseController
     {
         $data = [
             'judul' => 'Input dokumen',
-            'page' => 'layanan/v_input_dokumen',
+            'page' => 'admin/admindokumen/layanan/v_input_dokumen',
             'layanan' => $this->ModelLayanan->AllData(),
         ];
         return view('v_template_back_end', $data);

@@ -16,7 +16,7 @@ class Kecuali extends BaseController
     {
         $data = [
             'judul' => 'Dokumen kecuali',
-            'page' => 'kecuali/v_dokumen',
+            'page' => 'admin/admindokumen/kecuali/v_dokumen',
             'dokumen' => $this->ModelKecuali->AllData(),
         ];
         return view('v_template_back_end', $data);
