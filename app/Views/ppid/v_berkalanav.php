@@ -194,13 +194,13 @@
 
                         <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="#">Dasar Hukum</a></li>
-                                <li><a href="#">Layanan Informasi</a></li>
-                                <li><a href="#">Informasi Berkala</a></li>
-                                <li><a href="#">Informasi Serta Merta</a></li>
-                                <li><a href="#">Informasi Setiap Saat</a></li>
-                                <li><a href="#">Informasi Dikecualikan</a></li>
-                                <li><a href="#">Profil PPID</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Hukumnav') ?>">Dasar Hukum</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Layanannav') ?>">Layanan Informasi</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Berkalanav') ?>">Informasi Berkala</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Mertanav') ?>">Informasi Serta Merta</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Saatnav') ?>">Informasi Setiap Saat</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Kecualinav') ?>">Informasi Dikecualikan</a></li>
+                                <li><a href="<?= base_url('/index.php/nav/Profilnav') ?>">Profil PPID</a></li>
                             </ul>
                         </li>
 
