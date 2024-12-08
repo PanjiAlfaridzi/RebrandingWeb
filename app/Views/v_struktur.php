@@ -109,91 +109,129 @@
             transform: translateY(-10px);
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
         }
+
+        .offcanvas {
+            background-color: rgba(255, 255, 255, 0.9); /* Transparansi pada offcanvas */
+            color: black;
+        }
+        .offcanvas-header {
+            justify-content: flex-end;
+        }
+        .offcanvas-body .nav-item {
+            margin: 10px 0;
+        }
+        .offcanvas-body .nav-link {
+            color: black;
+            background-color: #e9ecef;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            display: block;
+        }
+        .offcanvas-body .nav-link:hover {
+            color: #1e90ff;
+            background-color: #dee2e6;
+        }
+        .offcanvas-body .nav-link.active {
+            color: #1e90ff;
+            background-color: #dee2e6;
+        }
+        .btn.btn-secondary {
+            flex: 0 1 auto;
+            background-color: white;
+            border-color: white;
+        }
+        .btn.btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.8); /* Warna tombol saat hover */
+            border-color: rgba(255, 255, 255, 0.8);
+        }
     </style>
 </head>
 
 <body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
-        <div class="container">
-            <!-- Top Header with Logo -->
-            <div class="d-flex align-items-center py-2">
-                <div class="d-flex align-items-center">
-                    <img src="<?= base_url('logo/logo.png') ?>" alt="Logo Dinas Perikanan" class="me-3" style="width: 50px; height: auto;">
-                    <h1 class="logo mb-0">
-                        <a href="<?= base_url() ?>" class="text-decoration-none">
-                            <span class="fs-4 fw-bold d-block">Dinas Perikanan</span>
-                            <span class="fs-6 text-secondary">Kota Semarang</span>
-                        </a>
-                    </h1>
-                </div>
+    <nav class="navbar navbar-light ms-5 me-2"> <!-- navbar-light untuk teks gelap -->
+        <a class="navbar-brand" href="<?= base_url() ?>">
+            <img src="<?= base_url('logo/logo.png') ?>" alt="Logo Dinas Perikanan" style="height: 40px;">
+        </a>
+        <ul class="navbar-nav-center">
+            <li class="nav-item">
+                <a class="nav-link active" id="nav-beranda" href="<?= base_url() ?>">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+                <ul class="dropdown-menu" aria-labelledby="profilDropdown">
+                    <li><a class="dropdown-item" href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
+                            <li><a class="dropdown-item" href="#">Kepala Dinas</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/Tugas') ?>">Tupoksi</a></li>
+                            <li><a class="dropdown-item" href="#">Bidang & UPTD</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
+                <ul class="dropdown-menu" aria-labelledby="layananDropdown">
+                    <li><a class="dropdown-item" href="#">Kartu Nelayan</a></li>
+                    <li><a class="dropdown-item" href="#">Asuransi Nelayan</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Informasi</a>
+                <ul class="dropdown-menu" aria-labelledby="informasiDropdown">
+                    <li><a class="dropdown-item" href="<?= base_url('/index.php/Beritanav') ?>">Berita</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/Artikel') ?>">Artikel</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/Agenda') ?>">Agenda (Rencana Kegiatan)</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/Soprenja') ?>">Sop Renja</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="ppidDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PPID</a>
+                <ul class="dropdown-menu" aria-labelledby="ppidDropdown">
+                    <li><a class="dropdown-item" href="<?= base_url('/index.php/nav/Hukumnav') ?>">Dasar Hukum</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/nav/Layanannav') ?>">Layanan Informasi</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/nav/Berkalanav') ?>">Informasi Berkala</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/nav/Mertanav') ?>">Informasi Serta Merta</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/nav/Saatnav') ?>">Informasi Setiap Saat</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/nav/Kecualinav') ?>">Informasi Dikecualikan</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/index.php/nav/Profilnav') ?>">Profil PPID</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+        <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
 
-                <!-- Mobile Toggle Button -->
-                <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                    <i class="bi bi-list"></i>
-                </button>
-            </div>
-
-            <!-- Main Navigation -->
-            <nav id="mainNavbar" class="navbar navbar-expand-lg py-0">
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav w-100 justify-content-around">
-                        <!-- Beranda -->
-                        <li class="nav-item">
-                            <a class="nav-link active" href="<?= base_url() ?>">Beranda</a>
-                        </li>
-
-                        <!-- Profil -->
-                        <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="<?= base_url('/index.php/Visi') ?>">Visi, Misi dan Tujuan</a></li>
-                                <li><a href="<?= base_url('/index.php/Struktur') ?>">Struktur Organisasi</a></li>
-                                <li><a href="#">Kepala Dinas</a></li>
-                                <li><a href="<?= base_url('/index.php/Tugas') ?>">Tupoksi</a></li>
-                                <li><a href="#">Bidang & UPTD</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="#">Kartu Nelayan</a></li>
-                                <li><a href="#">Asuransi Nelayan</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown"><a href="#"><span>Informasi</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="<?= base_url('/index.php/Beritanav') ?>">Berita</a></li>
-                                <li><a href="<?= base_url('/index.php/Artikel') ?>">Artikel</a></li>
-                                <li><a href="<?= base_url('/index.php/Agenda') ?>">Agenda (Rencana Kegiatan)</a></li>
-                                <li><a href="<?= base_url('/index.php/Soprenja') ?>">Sop Renja</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown"><a href="#"><span>PPID</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="#">Dasar Hukum</a></li>
-                                <li><a href="#">Layanan Informasi</a></li>
-                                <li><a href="#">Informasi Berkala</a></li>
-                                <li><a href="#">Informasi Serta Merta</a></li>
-                                <li><a href="#">Informasi Setiap Saat</a></li>
-                                <li><a href="#">Informasi Dikecualikan</a></li>
-                                <li><a href="#">Profil PPID</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="<?= base_url('/index.php/nav/Dokumennav') ?>">Dokumen Perencanaan</a></li>
-                        <li><a href="#">Peraturan Perundangan</a></li>
-
-                        <li><a href="<?= base_url('/index.php/nav/Gallerynav') ?>"><span>Galeri</span></a>
-                        </li>
-
-                        <li><a href="<?= base_url('/index.php/Contact') ?>">Kontak</a></li>
-                    </ul>
-                </div>
-            </nav>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </header>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/index.php/nav/Dokumennav') ?>">Dokumen Perencanaan</a>
+                </li>
+
+                <!-- Peraturan Perundangan -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Peraturan Perundangan</a>
+                </li>
+
+                <!-- Galeri -->
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/index.php/nav/Gallerynav') ?>">Galeri</a>
+                </li>
+
+                <!-- Kontak -->
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/index.php/Contact') ?>">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
 
     <!-- ======= Struktur Organisasi Section ======= -->
     <section id="struktur-organisasi">
