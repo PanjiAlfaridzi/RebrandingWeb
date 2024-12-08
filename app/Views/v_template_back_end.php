@@ -222,6 +222,11 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="<?= base_url('/index.php/Kecuali') ?>">
+                                            <span class="sub-item">Dokumen informasi dikecualikan</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="<?= base_url('/index.php/Saat') ?>">
                                             <span class="sub-item">Dokumen Saat</span>
                                         </a>

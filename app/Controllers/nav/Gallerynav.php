@@ -18,7 +18,7 @@ class Gallerynav extends BaseController
     public function index()
     {
         $data['gallery'] = $this->ModelGallerynav->orderBy('tgl_galeri', 'DESC')->findAll();
-        $data['judul_galeri'] = "Dokumen perencanaan";
+        $data['judul_galeri'] = "Galeri";
 
         return view('v_gallerynav', $data);
     }
